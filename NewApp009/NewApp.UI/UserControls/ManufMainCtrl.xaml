@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.ManufMainCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}" IsVisibleChanged="UserControl_IsVisibleChanged" Style="{StaticResource UserControlStyle}"     HorizontalAlignment="Center">
+    <Grid HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <Grid >
+                     <StackPanel Orientation="Horizontal">
+                          <TextBlock Margin="5"  Text="Manuf Name/Id"></TextBlock>
+                          <TextBox Margin="5"  Name="txt_ManufNameId" TextChanged="txt_ManufNameId_TextChanged"></TextBox>
+                     </StackPanel>
+                </Grid>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                <DataGrid Name="dg_ManufMain" Height="125" VerticalAlignment="Top"    SelectionChanged="dg_ManufMain_SelectionChanged" MouseUp="dg_ManufMain_MouseUp">
+                        <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding ManufacturerId}"  Header="Manuf Id" Width="90"/>
+                        <DataGridTextColumn Binding="{Binding ManufacturerName}"  Header="Manuf Name" Width="150"/>
+                        <DataGridTextColumn Binding="{Binding Status.ManufacturerStatusValue}"  Header="Status" Width="90"/>
+                        <DataGridTextColumn Binding="{Binding Mobile}"  Header="Mobile" Width="150"/>
+                        <DataGridTextColumn Binding="{Binding AmountTobePaid}"  Header="Amount To be Paid" Width="125"/>
+                        <DataGridTextColumn Binding="{Binding AmountPaidYTD}"  Header="Amount Paid YTD" Width="125"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5"  Name="btn_SelManuf" Content="Select" Click="btn_SelManufacturer_Click"></Button>
+                        <Button Margin="5"  Name="btn_AddManuf" Click="btn_AddManufacturer_Click">New</Button>
+                        <Button Margin="5"  Name="btn_ModifyManuf" Click="btn_ModifyManufacturer_Click">Modify</Button>
+                        <Button Margin="5"  Name="btn_DeleteManuf" Click="btn_DeleteManufacturer_Click">Delete</Button>
+                        <Button Margin="5"  Name="Btn_Close" Click="Btn_Close_Click">Close</Button>
+                    </StackPanel>
+                </Grid>
+                <UsrCtrls:ManufDtlViewCtrl x:Name="uc_ManufDetails" HorizontalAlignment="Center" VerticalAlignment="Top" Loaded="uc_ManufDetails_Loaded" />
+            </StackPanel>
+            </StackPanel>
+    </Grid>
+</UserControl>
+

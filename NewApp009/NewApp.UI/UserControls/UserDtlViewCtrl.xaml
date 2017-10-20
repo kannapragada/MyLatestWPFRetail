@@ -1,0 +1,181 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.UserDtlViewCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" IsVisibleChanged="UserControl_IsVisibleChanged" Style="{StaticResource UserControlStyle}"    HorizontalAlignment="Center">
+    <Grid Name="grid_UserDtlInputCtrl" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical"  Margin="5">
+            <TabControl Name="tab_Main" Height="360" Width="770" VerticalAlignment="Top">
+                <TabItem Name="tab_BasicDtls" Header="Basic Details" >
+                    <Grid Height="325" Width="740" Margin="5" VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid x:Name="grid_UserDtlInput1" Grid.Row="0" Grid.Column="0" Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.1*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="0.1*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="10"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Name="tb_UserId" >User Id</TextBlock>
+                            <TextBox Grid.Row="1" Grid.Column="3" Name="txt_UserId" IsReadOnly="True"></TextBox>
+                            <TextBlock Grid.Row="2" Grid.Column="1" Name="tb_UserName" >User Name</TextBlock>
+                            <TextBox Grid.Row="2" Grid.Column="3" Name="txt_UserName" IsReadOnly="True"></TextBox>
+                            <TextBlock Grid.Row="3" Grid.Column="1" Name="tb_UserStatus" >Status</TextBlock>
+                            <TextBox Grid.Row="3" Grid.Column="3" Name="txt_UserStatus" IsReadOnly="True"></TextBox>
+                            <TextBlock Grid.Row="4" Grid.Column="1" Name="tb_UserDateofBirth" >Date of Birth</TextBlock>
+                            <TextBox Grid.Row="4" Grid.Column="3" Name="date_UserDateofBirth"  ></TextBox>
+                            <TextBlock Grid.Row="5" Grid.Column="1" Name="tb_UserGender" >Gender</TextBlock>
+                            <TextBox Grid.Row="5" Grid.Column="3" Name="txt_UserGender" IsReadOnly="True"></TextBox>
+                            <TextBlock Grid.Row="6" Grid.Column="1" Name="tb_UserIDProofType"  >ID Proof Type</TextBlock>
+                            <TextBox Grid.Row="6" Grid.Column="3" Name="txt_UserIDProofType" IsReadOnly="True"></TextBox>
+                            <TextBlock Grid.Row="7" Grid.Column="1" Name="tb_UserIDProof"  >ID Proof</TextBlock>
+                            <TextBox Grid.Row="7" Grid.Column="3" Name="txt_UserIDProof" IsReadOnly="True"></TextBox>
+                            <TextBlock Grid.Row="8" Grid.Column="1" Name="tb_UserStartDateofRelationship" >Start Date of Relationship</TextBlock>
+                            <TextBox Grid.Row="8" Grid.Column="3" Name="date_UserStartDateofRelationship" />
+                            <TextBlock Grid.Row="9" Grid.Column="1" Name="tb_UserEndDateofRelationship" >End Date of Relationship</TextBlock>
+                            <TextBox Grid.Row="9" Grid.Column="3" Name="date_UserEndDateofRelationship" />
+                            <TextBlock Grid.Row="10" Grid.Column="1" Name="tb_UserAmtToBePaid" >Amount To Be Paid</TextBlock>
+                            <TextBox Grid.Row="10" Grid.Column="3" Name="txt_UserAmtToBePaid"  Text="0" IsReadOnly="True"></TextBox>
+                            <TextBlock Grid.Row="11" Grid.Column="1" Name="tb_UserAmtPaidYTD"  >Amount Paid YTD</TextBlock>
+                            <TextBox Grid.Row="11" Grid.Column="3" Name="txt_UserAmtPaidYTD"  Text="0" IsReadOnly="True"></TextBox>
+                        </Grid>
+                        <Grid x:Name="grid_UserDtlInput2" Grid.Row="0" Grid.Column="1" Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.1*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="0.1*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="1.8*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="1" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="3" Height="200" Width="175" HorizontalAlignment="Center" Name="image1" Stretch="UniformToFill" StretchDirection="Both" VerticalAlignment="Top" Source="/NewApp.UI.App;component/Images/NoImage.jpg" />
+                            <TextBlock Grid.Row="7" Grid.Column="1" Name="tb_CreateDate" >Created Date</TextBlock>
+                            <TextBox Grid.Row="7" Grid.Column="2" Name="txt_CreateDate"  ></TextBox>
+                            <TextBlock Grid.Row="8" Grid.Column="1" Name="tb_LastModDate" >Last Modified Date</TextBlock>
+                            <TextBox Grid.Row="8" Grid.Column="2" Name="txt_LastModDate"  ></TextBox>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tab_AddressDtls" Header="Address Details" VerticalAlignment="Top">
+                    <Grid x:Name="grid_UserAddressDtls" Height="325" Width="750" VerticalAlignment="Top" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="5" />
+                        </Grid.ColumnDefinitions>
+                        <GroupBox Name="grpbox_PresentAddressDtls" Grid.Row="0" Grid.Column="1" Height="300" Header="Present Address" VerticalAlignment="Top" Margin="5">
+                            <Grid x:Name="grid_CustomerDtlInput11" Height="250" VerticalAlignment="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.1*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="0.1*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="125"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Row="1" Grid.Column="1" Name="tb_PresentAddress" >Address</TextBlock>
+                                <TextBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" Name="txt_PresentAddress" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Top" MaxLength="100" MaxLines="4" Text=" hghkg hbjjkhjk hjhjh hjlkhjhj hjhjhjhj hjhjhjhj hjhjhjkh jhjhjhjh jhjhjhj " Width="200" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap"></TextBox>
+                                <TextBlock Grid.Row="4" Grid.Column="1" Name="tb_PresentCity" >City</TextBlock>
+                                <TextBox Grid.Row="4" Grid.Column="2" Name="txt_PresentCity" IsReadOnly="True"></TextBox>
+                                <TextBlock Grid.Row="5" Grid.Column="1" Name="tb_PresentPinCode" >Pin Code</TextBlock>
+                                <TextBox Grid.Row="5" Grid.Column="2" Name="txt_PresentPinCode" IsReadOnly="True"></TextBox>
+                                <TextBlock Grid.Row="6" Grid.Column="1" Name="tb_PresentPhone" >Phone</TextBlock>
+                                <TextBox Grid.Row="6" Grid.Column="2" Name="txt_PresentPhone" IsReadOnly="True"></TextBox>
+                                <TextBlock Grid.Row="7" Grid.Column="1" Name="tb_PresentMobile" >Mobile</TextBlock>
+                                <TextBox Grid.Row="7" Grid.Column="2" Name="txt_PresentMobile"  IsReadOnly="True"></TextBox>
+                                <TextBlock Grid.Row="8" Grid.Column="1" Name="tb_PresentEMail" >E-Mail Id</TextBlock>
+                                <TextBox Grid.Row="8" Grid.Column="2" Name="txt_PresentEMail" IsReadOnly="True"></TextBox>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Name="grpbox_PermAddressDtls" Grid.Row="0" Grid.Column="2" Height="300" Header="Permanent Address" VerticalAlignment="Top" Margin="5">
+                            <StackPanel Orientation="Vertical">
+                                <CheckBox Name="chk_IsPresentandPermAddSame" Width="200" Height="20" Content="Same as Present Address" HorizontalAlignment="Left" Margin="5" ></CheckBox>
+                                <Grid x:Name="grid_PermAddressDtls" Height="175"  VerticalAlignment="Center" Margin="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.1*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="0.1*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Name="tb_PermanentAddress" >Address</TextBlock>
+                                    <TextBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" Name="txt_PermanentAddress" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Top" MaxLength="100" MaxLines="4" Text=" hghkg hbjjkhjk hjhjh hjlkhjhj hjhjhjhj hjhjhjhj hjhjhjkh jhjhjhjh jhjhjhj " Width="200" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap"></TextBox>
+                                    <TextBlock Grid.Row="4" Grid.Column="1" Name="tb_PermanentCity" >City</TextBlock>
+                                    <TextBox Grid.Row="4" Grid.Column="2" Name="txt_PermanentCity" IsReadOnly="True"></TextBox>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Name="tb_PermanentPinCode" >Pin Code</TextBlock>
+                                    <TextBox Grid.Row="5" Grid.Column="2" Name="txt_PermanentPinCode" IsReadOnly="True"></TextBox>
+                                    <TextBlock Grid.Row="6" Grid.Column="1" Name="tb_PermanentPhone" >Phone</TextBlock>
+                                    <TextBox Grid.Row="6" Grid.Column="2" Name="txt_PermanentPhone" IsReadOnly="True"></TextBox>
+                                </Grid>
+                            </StackPanel>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tab_TxnDtls" Header="Transaction Details" VerticalAlignment="Top">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical">
+                        <DataGrid Height="300" Width="750" Name="dg_TxnResults" MouseDoubleClick="dg_TxnResults_MouseDown">
+                        </DataGrid>
+                        <TextBlock Height="15" Text="Total Records: "  Name="lblTotalRecords" HorizontalAlignment="Right" Margin="0,0,30,0"/>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+            <Grid x:Name="grid_Actions">
+                <Button  HorizontalAlignment="Center" Name="btn_Back" Click="btn_Back_Click">Back</Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

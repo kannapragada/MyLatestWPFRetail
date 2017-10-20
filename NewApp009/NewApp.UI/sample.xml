@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Persons>
+  <Person Name="John Smith">
+    <Age>30</Age>
+    <Gender>Male</Gender>
+  </Person>
+</Persons>

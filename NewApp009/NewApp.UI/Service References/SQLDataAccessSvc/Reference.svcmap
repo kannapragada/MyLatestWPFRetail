@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="49be252d-ddec-4558-896e-e0db18b3623a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="074f6c9a-fbb8-42c1-98df-b8b17e04df01" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7edf56e0-2ef1-455f-a269-99f350788443" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="765109bd-b625-4202-a45a-d7f4c78fdfcc" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="e6372fa3-3cb7-4f35-b695-c367dbfb15ad" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+    <MetadataFile FileName="System.Data.SqlClient.xsd" MetadataType="Schema" ID="c75d77ed-e349-4cbc-8469-48138f5c2fa6" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+    <MetadataFile FileName="System.Data.Common.xsd" MetadataType="Schema" ID="d009f0f2-42bf-445c-a3e6-50a1f9521483" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="f75574c2-cf23-482b-ac4c-fcb43a33c5a3" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+    <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="51bdf1b9-2a33-499f-882f-b51f426a9cb5" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+    <MetadataFile FileName="System.Data.SqlTypes.xsd" MetadataType="Schema" ID="7b750cf9-fbd1-46fb-b0aa-3f1a005bae08" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SQLDataAccess/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

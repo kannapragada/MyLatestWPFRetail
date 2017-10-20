@@ -1,0 +1,1422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7D3D9EE-15B7-403C-9D74-39E487AFF6AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewApp</RootNamespace>
+    <AssemblyName>NewApp.UI.App</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <StartupObject>NewApp.UI.App</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NewApp.BusinessTier.Models">
+      <HintPath>..\NewApp.BusinessTier.Models\bin\Debug\NewApp.BusinessTier.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="NewApp.Themes">
+      <HintPath>..\NewApp.Themes\bin\Debug\NewApp.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="PresentationFramework.Luna" />
+    <Reference Include="PresentationFramework.Royale" />
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMNDLLs\PresentationUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BillDataSet.cs">
+      <DependentUpon>BillDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BillDataSet.designer.cs">
+      <DependentUpon>BillDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AppBusinessTierState.cs" />
+    <Compile Include="Common\BusinessTierState.cs" />
+    <Compile Include="Common\UIServices.cs" />
+    <Compile Include="Common\UtilityClass.cs" />
+    <Compile Include="Common\XMLProcessing.cs" />
+    <Compile Include="CustomEventArgs.cs" />
+    <Compile Include="EMail.cs" />
+    <Compile Include="ExcelInterOp\ExcelInterOp.cs" />
+    <Compile Include="ExcelInterOp\ExcelInterOp.xaml.cs">
+      <DependentUpon>ExcelInterOp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelInterOp\UserControls\ExcelInterOpCtrl.xaml.cs">
+      <DependentUpon>ExcelInterOpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.xaml.cs">
+      <DependentUpon>LoginScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPwdScreen.xaml.cs">
+      <DependentUpon>ForgotPwdScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyDataSet.Designer.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ExpiringItemsRepCtrl.xaml.cs">
+      <DependentUpon>ExpiringItemsRepCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DailySalesRepCtrl.xaml.cs">
+      <DependentUpon>DailySalesRepCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustOutstandingRepCtrl.xaml.cs">
+      <DependentUpon>CustOutstandingRepCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DiscountKindFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DashboardCtrl.xaml.cs">
+      <DependentUpon>DashboardCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustomerFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustomerStatusFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustomerTypeFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DiscountFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DiscountItemFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DiscountTypeFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GenderTypeFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IDProofTypeFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ManufFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ManufStatusFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SaleFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SaleItemFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SQLDataAccessFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StoreItemFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TaxFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TaxItemFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TaxKindFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TaxTypeFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserStatusFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserTypeFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VendorFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VendorStatusFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CalculatorCtrl.xaml.cs">
+      <DependentUpon>CalculatorCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ComposeMailCtrl.xaml.cs">
+      <DependentUpon>ComposeMailCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewMain.xaml.cs">
+      <DependentUpon>NewMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BillReport.xaml.cs">
+      <DependentUpon>BillReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BillRepCtrl.xaml.cs">
+      <DependentUpon>BillRepCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProcessEventArgs.cs" />
+    <Compile Include="UserControls\QuickSearchCtrl.xaml.cs">
+      <DependentUpon>QuickSearchCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserDtlInputCtrl.xaml.cs">
+      <DependentUpon>UserDtlInputCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserDtlViewCtrl.xaml.cs">
+      <DependentUpon>UserDtlViewCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserMainCtrl.xaml.cs">
+      <DependentUpon>UserMainCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManufMainCtrl.xaml.cs">
+      <DependentUpon>ManufMainCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\VendorDtlInputCtrl.xaml.cs">
+      <DependentUpon>VendorDtlInputCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\VendorDtlViewCtrl.xaml.cs">
+      <DependentUpon>VendorDtlViewCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\VendorMainCtrl.xaml.cs">
+      <DependentUpon>VendorMainCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManufDtlInputCtrl.xaml.cs">
+      <DependentUpon>ManufDtlInputCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManufDtlViewCtrl.xaml.cs">
+      <DependentUpon>ManufDtlViewCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoadingWait.xaml.cs">
+      <DependentUpon>LoadingWait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PreferencesCtrl.xaml.cs">
+      <DependentUpon>PreferencesCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustDtlViewCtrl.xaml.cs">
+      <DependentUpon>CustDtlViewCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaxDtlCtrl.xaml.cs">
+      <DependentUpon>TaxDtlCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaxItemCtrl.xaml.cs">
+      <DependentUpon>TaxItemCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TaxMainCtrl.xaml.cs">
+      <DependentUpon>TaxMainCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DiscItemCtrl.xaml.cs">
+      <DependentUpon>DiscItemCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DiscDtlCtrl.xaml.cs">
+      <DependentUpon>DiscDtlCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DiscMainCtrl.xaml.cs">
+      <DependentUpon>DiscMainCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InputBoxCtrl.xaml.cs">
+      <DependentUpon>InputBoxCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HdrControls.xaml.cs">
+      <DependentUpon>HdrControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleDetailViewCtrl.xaml.cs">
+      <DependentUpon>SaleDetailViewCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserCtrlArgs.cs" />
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window14.xaml.cs">
+      <DependentUpon>Window14.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window2.xaml.cs">
+      <DependentUpon>Window2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window3.xaml.cs">
+      <DependentUpon>Window3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WinPreferences.xaml.cs">
+      <DependentUpon>WinPreferences.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WinBill.xaml.cs">
+      <DependentUpon>WinBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WinSaleDetailView.xaml.cs">
+      <DependentUpon>WinSaleDetailView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\WinInputBox.xaml.cs">
+      <DependentUpon>WinInputBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WinMessageBox.xaml.cs">
+      <DependentUpon>WinMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFRetailDataSet.cs">
+      <DependentUpon>WPFRetailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WPFRetailDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WPFRetailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="XMLProcessing.cs" />
+    <Page Include="ExcelInterOp\ExcelInterOp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExcelInterOp\UserControls\ExcelInterOpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ForgotPwdScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\ExpiringItemsRepCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\DailySalesRepCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\CustOutstandingRepCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DashboardCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CalculatorCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ComposeMailCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\BillReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\BillRepCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\QuickSearchCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UserDtlInputCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UserDtlViewCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UserMainCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ManufMainCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\VendorDtlInputCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\VendorDtlViewCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\VendorMainCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ManufDtlInputCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ManufDtlViewCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LoadingWait.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\PreferencesCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CustDtlViewCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaxDtlCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaxItemCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaxMainCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DiscItemCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DiscDtlCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DiscMainCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\InputBoxCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\AppFooter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\HdrControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SearchMainCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\StoreItemCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ItemMainCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\CustMainCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\AppLogo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\CustDtlInputCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UserDtlCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleMainCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApplicationState.cs" />
+    <Compile Include="UserControls\AppFooter.xaml.cs">
+      <DependentUpon>AppFooter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchMainCtrl.xaml.cs">
+      <DependentUpon>SearchMainCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StoreItemCtrl.xaml.cs">
+      <DependentUpon>StoreItemCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ItemMainCtrl.xaml.cs">
+      <DependentUpon>ItemMainCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustMainCtrl.xaml.cs">
+      <DependentUpon>CustMainCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppLogo.xaml.cs">
+      <DependentUpon>AppLogo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustDtlInputCtrl.xaml.cs">
+      <DependentUpon>CustDtlInputCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserDtlCtrl.xaml.cs">
+      <DependentUpon>UserDtlCtrl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserControls\SaleMainCtrl.xaml.cs">
+      <DependentUpon>SaleMainCtrl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UserControls\SaleDetailViewCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WinPreferences.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\WinBill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WinSaleDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WinInputBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\WinMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="BillDataSet.xsc">
+      <DependentUpon>BillDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BillDataSet.xsd" />
+    <None Include="BillDataSet.xss">
+      <DependentUpon>BillDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Configfiles\Home.config" />
+    <None Include="Configfiles\Office.config" />
+    <None Include="ExcelInterOp\Input\AppData.xlsx" />
+    <None Include="MyDataSet.xsc">
+      <DependentUpon>MyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDataSet.xsd" />
+    <None Include="MyDataSet.xss">
+      <DependentUpon>MyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Customer.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.CustomerStatus.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.CustomerType.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Discount.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.DiscountKind.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.DiscountType.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.GenderType.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.IDProofType.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Manufacturer.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.ManufacturerStatus.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Sale.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.SaleItem.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.StoreItem.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Tax.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.TaxItem.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.TaxKind.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.TaxType.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.User.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.UserStatus.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.UserType.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Vendor.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.VendorStatus.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\CustomerFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerFactorySvc\service.wsdl" />
+    <None Include="Service References\CustomerFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerStatusFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerStatusFactorySvc\service.wsdl" />
+    <None Include="Service References\CustomerStatusFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerStatusFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerTypeFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerTypeFactorySvc\service.wsdl" />
+    <None Include="Service References\CustomerTypeFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerTypeFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountFactorySvc\service.wsdl" />
+    <None Include="Service References\DiscountFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountItemFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountItemFactorySvc\service.wsdl" />
+    <None Include="Service References\DiscountItemFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountItemFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountItemFactorySvc\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountKindFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountKindFactorySvc\service.wsdl" />
+    <None Include="Service References\DiscountKindFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountKindFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountTypeFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountTypeFactorySvc\service.wsdl" />
+    <None Include="Service References\DiscountTypeFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiscountTypeFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GenderTypeFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GenderTypeFactorySvc\service.wsdl" />
+    <None Include="Service References\GenderTypeFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GenderTypeFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IDProofTypeFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IDProofTypeFactorySvc\service.wsdl" />
+    <None Include="Service References\IDProofTypeFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IDProofTypeFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufFactorySvc\service.wsdl" />
+    <None Include="Service References\ManufFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufStatusFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufStatusFactorySvc\service.wsdl" />
+    <None Include="Service References\ManufStatusFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufStatusFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleFactorySvc\service.wsdl" />
+    <None Include="Service References\SaleFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleItemFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleItemFactorySvc\service.wsdl" />
+    <None Include="Service References\SaleItemFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleItemFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQLDataAccessFactorySvc\service.wsdl" />
+    <None Include="Service References\SQLDataAccessFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQLDataAccessFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQLDataAccessFactorySvc\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQLDataAccessFactorySvc\System.Data.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQLDataAccessFactorySvc\System.Data.SqlClient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQLDataAccessFactorySvc\System.Data.SqlTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQLDataAccessFactorySvc\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SQLDataAccessFactorySvc\System.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreItemFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreItemFactorySvc\service.wsdl" />
+    <None Include="Service References\StoreItemFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreItemFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxFactorySvc\service.wsdl" />
+    <None Include="Service References\TaxFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxItemFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxItemFactorySvc\service.wsdl" />
+    <None Include="Service References\TaxItemFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxItemFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxItemFactorySvc\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxKindFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxKindFactorySvc\service.wsdl" />
+    <None Include="Service References\TaxKindFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxKindFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxTypeFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxTypeFactorySvc\service.wsdl" />
+    <None Include="Service References\TaxTypeFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TaxTypeFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserFactorySvc\service.wsdl" />
+    <None Include="Service References\UserFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserStatusFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserStatusFactorySvc\service.wsdl" />
+    <None Include="Service References\UserStatusFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserStatusFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserTypeFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserTypeFactorySvc\service.wsdl" />
+    <None Include="Service References\UserTypeFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserTypeFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorFactorySvc\service.wsdl" />
+    <None Include="Service References\VendorFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorStatusFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorStatusFactorySvc\service.wsdl" />
+    <None Include="Service References\VendorStatusFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorStatusFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WPFRetailDataSet.xsc">
+      <DependentUpon>WPFRetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WPFRetailDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WPFRetailDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WPFRetailDataSet.xss">
+      <DependentUpon>WPFRetailDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Rdlcs\Regular\BillBasic.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Rdlcs\Regular\BillDetail.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Rdlcs\Regular\BillRepMain.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISVendorsYearRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISVendorsMonthRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISItemsYearRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISItemsMonthRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISSalesYearRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISSalesMonthRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISCustMonthRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISCustYearRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\MIS\MISStatistics.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\Regular\CustOutstanding.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\Regular\DailySalesRep.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlcs\Regular\ExpiringItems.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EMail\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EMail_Image.jpg" />
+    <Resource Include="Images\Refresh_Image.jpg" />
+    <Resource Include="Images\Search_Image.jpg" />
+    <Resource Include="Images\Graph_Image.jpg" />
+    <Resource Include="Images\MessageBox_error.jpg" />
+    <Resource Include="Images\MessageBox_failure.jpg" />
+    <Resource Include="Images\MessageBox_Information.jpg" />
+    <Resource Include="Images\MessageBox_Success.jpg" />
+    <Resource Include="Images\MessageBox_validation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NoImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MyAppLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CustomerFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\CustomerStatusFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\CustomerTypeFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\DiscountFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\DiscountItemFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\DiscountKindFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\DiscountTypeFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\GenderTypeFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\IDProofTypeFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\ManufFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\ManufStatusFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\SaleFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\SaleItemFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\SQLDataAccessFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\StoreItemFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\TaxFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\TaxItemFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\TaxKindFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\TaxTypeFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\UserFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\UserStatusFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\UserTypeFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\VendorFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\VendorStatusFactorySvc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerStatusFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerStatusFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerStatusFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerTypeFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerTypeFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerTypeFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountItemFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountItemFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountItemFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountTypeFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountTypeFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountTypeFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GenderTypeFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GenderTypeFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GenderTypeFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IDProofTypeFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IDProofTypeFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IDProofTypeFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufStatusFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufStatusFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufStatusFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleItemFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleItemFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleItemFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SQLDataAccessFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SQLDataAccessFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SQLDataAccessFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StoreItemFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StoreItemFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StoreItemFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxItemFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxItemFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxItemFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxKindFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxKindFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxKindFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserStatusFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserStatusFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserStatusFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserTypeFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserTypeFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserTypeFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorStatusFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorStatusFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorStatusFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxTypeFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxTypeFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TaxTypeFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MessageBox_question.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Success_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\success.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\busy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon_animated_busy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountKindFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountKindFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiscountKindFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

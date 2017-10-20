@@ -1,0 +1,68 @@
+﻿<Window x:Class="NewApp.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window3" Width="1000" Height="600" Margin="0">
+    <Window.Resources>
+        <RadialGradientBrush x:Key="ExpanderFill1" RadiusY="0.573" RadiusX="0.667" GradientOrigin="1.01,1.035">
+            <GradientStop Color="DarkSlateBlue" Offset="0.81"/>
+            <GradientStop Color="SlateBlue"/>
+        </RadialGradientBrush>
+
+        <Style TargetType="{x:Type MenuItem}">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Green"></Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="Yellow"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+    </Window.Resources>
+    <Grid Width="210" Background="{StaticResource ExpanderFill1}" HorizontalAlignment="Left" Margin="0">
+        <StackPanel Orientation="Vertical">
+            <Expander Width="210" HorizontalAlignment="Left" Header="Main Menu" Foreground="White">
+            <Menu Name="Menu_MainMenu" Margin="5" Background="Transparent"  Foreground="White" Width="200">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem  Name="Menu_DashBoard" Header="Dash Board" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+                <MenuItem  Name="Menu_SaleMain" Header="New Sale" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200" Click="Menu_SaleMain_Click" />
+                <MenuItem  Name="Menu_SearchMain" Header="Search Main" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+                <MenuItem  Name="Menu_MailMain" Header="Send Mail" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+            </Menu>
+        </Expander>
+            <Expander Width="210" HorizontalAlignment="Left" Header="Main Menu" Foreground="White">
+            <Menu Name="Menu_MainMenu1" Margin="5" Background="Transparent"  Foreground="White" Width="200">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem  Name="Menu_DashBoard1" Header="Dash Board" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+                <MenuItem  Name="Menu_SaleMain1" Header="New Sale" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+                <MenuItem  Name="Menu_SearchMain1" Header="Search Main" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+                <MenuItem  Name="Menu_MailMain1" Header="Send Mail" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+            </Menu>
+        </Expander>
+            <Expander Width="210" HorizontalAlignment="Left" Header="Main Menu" Foreground="White">
+            <Menu Name="Menu_MainMenu2" Margin="5" Background="Transparent"  Foreground="White" Width="200">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem  Name="Menu_DashBoard2" Header="Dash Board" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+                <MenuItem  Name="Menu_SaleMain2" Header="New Sale" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+                <MenuItem  Name="Menu_SearchMain2" Header="Search Main" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+                <MenuItem  Name="Menu_MailMain2" Header="Send Mail" HorizontalAlignment="Center" Background="Transparent" Foreground="White" Width="200"/>
+            </Menu>
+        </Expander>
+        </StackPanel>
+    </Grid>
+</Window>

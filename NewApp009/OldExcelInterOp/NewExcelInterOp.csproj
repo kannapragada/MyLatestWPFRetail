@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F5D5241-375E-4C1D-A423-27DF928DF497}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewExcelInterOp</RootNamespace>
+    <AssemblyName>NewExcelInterOp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>NewExcelInterOp.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NewApp.BusinessTier.Models">
+      <HintPath>..\NewApp.BusinessTier.Models\bin\Debug\NewApp.BusinessTier.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Service References\CustomerFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ManufacturerFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StoreItemFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VendorFactorySvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExcelInterOpCtrl.xaml.cs">
+      <DependentUpon>ExcelInterOpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WinMessageBox.xaml.cs">
+      <DependentUpon>WinMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ExcelInterOp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelInterOp.cs" />
+    <Compile Include="ExcelInterOp.xaml.cs">
+      <DependentUpon>ExcelInterOp.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ExcelInterOpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\WinMessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Input\AppData.xlsx" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Customer.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Manufacturer.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.StoreItem.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.User.datasource" />
+    <None Include="Properties\DataSources\NewApp.BusinessTier.Models.Vendor.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\CustomerFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerFactorySvc\service.wsdl" />
+    <None Include="Service References\CustomerFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufacturerFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufacturerFactorySvc\service.wsdl" />
+    <None Include="Service References\ManufacturerFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ManufacturerFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreItemFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreItemFactorySvc\service.wsdl" />
+    <None Include="Service References\StoreItemFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreItemFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserFactorySvc\service.wsdl" />
+    <None Include="Service References\UserFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorFactorySvc\NewApp.BusinessTier.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorFactorySvc\service.wsdl" />
+    <None Include="Service References\VendorFactorySvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorFactorySvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CustomerFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\ManufacturerFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\StoreItemFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\UserFactorySvc\" />
+    <WCFMetadataStorage Include="Service References\VendorFactorySvc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EMail_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Graph_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MessageBox_error.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MessageBox_failure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MessageBox_Information.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MessageBox_question.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MessageBox_Success.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MessageBox_validation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MyAppLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NoImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Refresh_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Search_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Success_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufacturerFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufacturerFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ManufacturerFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StoreItemFactorySvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StoreItemFactorySvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StoreItemFactorySvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

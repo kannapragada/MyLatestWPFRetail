@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="StoreItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BatchCreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BatchLastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateOfExp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateOfManuf" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateProcured" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscountAmountPerUnit" type="xs:double" />
+      <xs:element minOccurs="0" name="DiscountList" nillable="true" type="tns:ArrayOfDiscountItem" />
+      <xs:element minOccurs="0" name="ItemCreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemLastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRP" type="xs:double" />
+      <xs:element minOccurs="0" name="ManufacturerInfo" nillable="true" type="tns:Manufacturer" />
+      <xs:element minOccurs="0" name="OldBatchId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcuredPricePerUnit" type="xs:double" />
+      <xs:element minOccurs="0" name="QtyAvailable" type="xs:int" />
+      <xs:element minOccurs="0" name="QtyProcured" type="xs:int" />
+      <xs:element minOccurs="0" name="SellingPricePerUnit" type="xs:double" />
+      <xs:element minOccurs="0" name="TaxAmountPerUnit" type="xs:double" />
+      <xs:element minOccurs="0" name="TaxList" nillable="true" type="tns:ArrayOfTaxItem" />
+      <xs:element minOccurs="0" name="VendorInfo" nillable="true" type="tns:Vendor" />
+      <xs:element minOccurs="0" name="WeightAvailable" type="xs:double" />
+      <xs:element minOccurs="0" name="WeightProcured" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoreItem" nillable="true" type="tns:StoreItem" />
+  <xs:complexType name="ArrayOfDiscountItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiscountItem" nillable="true" type="tns:DiscountItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiscountItem" nillable="true" type="tns:ArrayOfDiscountItem" />
+  <xs:complexType name="DiscountItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiscCreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscItemBatchId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscItemEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscItemStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscLastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscRemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountDetail" nillable="true" type="tns:Discount" />
+      <xs:element minOccurs="0" name="StoreItemDetail" nillable="true" type="tns:StoreItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiscountItem" nillable="true" type="tns:DiscountItem" />
+  <xs:complexType name="Discount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiscCreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscLastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiscountCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountItemsList" nillable="true" type="tns:ArrayOfDiscountItem" />
+      <xs:element minOccurs="0" name="DiscountKind" nillable="true" type="tns:DiscountKind" />
+      <xs:element minOccurs="0" name="DiscountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountRemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountType" nillable="true" type="tns:DiscountType" />
+      <xs:element minOccurs="0" name="DiscountValue" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Discount" nillable="true" type="tns:Discount" />
+  <xs:complexType name="DiscountKind">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiscountKindDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountKindId" type="xs:int" />
+      <xs:element minOccurs="0" name="DiscountKindValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiscountKind" nillable="true" type="tns:DiscountKind" />
+  <xs:complexType name="DiscountType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiscountTypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="DiscountTypeValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiscountType" nillable="true" type="tns:DiscountType" />
+  <xs:complexType name="Manufacturer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountPaidYTD" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountTobePaid" type="xs:double" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateofBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EMailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenderType" nillable="true" type="tns:GenderType" />
+      <xs:element minOccurs="0" name="IDProofType" nillable="true" type="tns:IDProofType" />
+      <xs:element minOccurs="0" name="IDProofValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IsPresentPermAddressSame" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ManufacturerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManufacturerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentPhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentPhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationshipExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RelationshipStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesDetails" nillable="true" type="tns:ArrayOfSale" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="tns:ManufacturerStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Manufacturer" nillable="true" type="tns:Manufacturer" />
+  <xs:complexType name="GenderType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GenderTypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenderTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="GenderTypeValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenderType" nillable="true" type="tns:GenderType" />
+  <xs:complexType name="IDProofType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDProofTypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDProofTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="IDProofTypeValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IDProofType" nillable="true" type="tns:IDProofType" />
+  <xs:complexType name="ArrayOfSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sale" nillable="true" type="tns:Sale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSale" nillable="true" type="tns:ArrayOfSale" />
+  <xs:complexType name="Sale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BalanceAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="CustomerInfo" nillable="true" type="tns:Customer" />
+      <xs:element minOccurs="0" name="DiscountList" nillable="true" type="tns:ArrayOfDiscount" />
+      <xs:element minOccurs="0" name="FinalSaleAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="LastModificationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Mode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaidAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="ReturnedChangeAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="SaleDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SaleItemsList" nillable="true" type="tns:ArrayOfSaleItem" />
+      <xs:element minOccurs="0" name="SaleStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxList" nillable="true" type="tns:ArrayOfTax" />
+      <xs:element minOccurs="0" name="TotalDiscountAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalSaleAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalTaxAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="UserInfo" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sale" nillable="true" type="tns:Sale" />
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountPaidYTD" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountTobePaid" type="xs:double" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateofBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EMailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenderType" nillable="true" type="tns:GenderType" />
+      <xs:element minOccurs="0" name="GuestName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDProofType" nillable="true" type="tns:IDProofType" />
+      <xs:element minOccurs="0" name="IDProofValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IsPresentPermAddressSame" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentPhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentPhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationshipExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RelationshipStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesDetails" nillable="true" type="tns:ArrayOfSale" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="tns:CustomerStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="CustomerStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerStatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerStatusValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerStatus" nillable="true" type="tns:CustomerStatus" />
+  <xs:complexType name="ArrayOfDiscount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Discount" nillable="true" type="tns:Discount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiscount" nillable="true" type="tns:ArrayOfDiscount" />
+  <xs:complexType name="ArrayOfSaleItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SaleItem" nillable="true" type="tns:SaleItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSaleItem" nillable="true" type="tns:ArrayOfSaleItem" />
+  <xs:complexType name="SaleItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountAmountPerUnit" type="xs:double" />
+      <xs:element minOccurs="0" name="FinalItemAmt" type="xs:double" />
+      <xs:element minOccurs="0" name="ItemAmtPerUnit" type="xs:double" />
+      <xs:element minOccurs="0" name="ItemDiscAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemTaxAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="tns:Manufacturer" />
+      <xs:element minOccurs="0" name="Mode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="SaleCreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SaleLastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreItemDetail" nillable="true" type="tns:StoreItem" />
+      <xs:element minOccurs="0" name="TaxAmountPerUnit" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalItemAmt" type="xs:double" />
+      <xs:element minOccurs="0" name="Weight" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaleItem" nillable="true" type="tns:SaleItem" />
+  <xs:complexType name="ArrayOfTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tax" nillable="true" type="tns:Tax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTax" nillable="true" type="tns:ArrayOfTax" />
+  <xs:complexType name="Tax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxItemList" nillable="true" type="tns:ArrayOfTaxItem" />
+      <xs:element minOccurs="0" name="TaxKind" nillable="true" type="tns:TaxKind" />
+      <xs:element minOccurs="0" name="TaxName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxType" nillable="true" type="tns:TaxType" />
+      <xs:element minOccurs="0" name="TaxValue" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tax" nillable="true" type="tns:Tax" />
+  <xs:complexType name="ArrayOfTaxItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxItem" nillable="true" type="tns:TaxItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaxItem" nillable="true" type="tns:ArrayOfTaxItem" />
+  <xs:complexType name="TaxItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreItemDetail" nillable="true" type="tns:StoreItem" />
+      <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxDetail" nillable="true" type="tns:Tax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxItem" nillable="true" type="tns:TaxItem" />
+  <xs:complexType name="TaxKind">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TaxKindDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxKindId" type="xs:int" />
+      <xs:element minOccurs="0" name="TaxKindValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxKind" nillable="true" type="tns:TaxKind" />
+  <xs:complexType name="TaxType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TaxTypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="TaxTypeValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxType" nillable="true" type="tns:TaxType" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountPaidYTD" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountTobePaid" type="xs:double" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateofBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EMailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenderType" nillable="true" type="tns:GenderType" />
+      <xs:element minOccurs="0" name="IDProofType" nillable="true" type="tns:IDProofType" />
+      <xs:element minOccurs="0" name="IDProofValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IsPresentPermAddressSame" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentPhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentPhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationshipExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RelationshipStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesDetails" nillable="true" type="tns:ArrayOfSale" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="tns:UserStatus" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserSecretAnswer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserSecretQueryId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserThemeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="UserStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserStatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserStatusValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserStatus" nillable="true" type="tns:UserStatus" />
+  <xs:complexType name="ManufacturerStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ManufacturerStatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManufacturerStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="ManufacturerStatusValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ManufacturerStatus" nillable="true" type="tns:ManufacturerStatus" />
+  <xs:complexType name="Vendor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountPaidYTD" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountTobePaid" type="xs:double" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateofBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EMailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenderType" nillable="true" type="tns:GenderType" />
+      <xs:element minOccurs="0" name="IDProofType" nillable="true" type="tns:IDProofType" />
+      <xs:element minOccurs="0" name="IDProofValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IsPresentPermAddressSame" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentPhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentPhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationshipExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RelationshipStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesDetails" nillable="true" type="tns:ArrayOfSale" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="tns:VendorStatus" />
+      <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Vendor" nillable="true" type="tns:Vendor" />
+  <xs:complexType name="VendorStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VendorStatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="VendorStatusValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendorStatus" nillable="true" type="tns:VendorStatus" />
+  <xs:complexType name="ArrayOfStoreItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoreItem" nillable="true" type="tns:StoreItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoreItem" nillable="true" type="tns:ArrayOfStoreItem" />
+</xs:schema>

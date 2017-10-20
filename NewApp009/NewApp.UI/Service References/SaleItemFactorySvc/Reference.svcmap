@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="25943bf9-41dc-4486-b4b1-1ec8fe49a61c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SaleItemFactory/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="190610cd-0fd4-4ccf-b2d6-85841c3489d3" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SaleItemFactory/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="18db990c-79d8-4599-8faa-75debdfa2700" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SaleItemFactory/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c60972f3-744e-4b19-a0ab-fc636ff54acc" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SaleItemFactory/mex" />
+    <MetadataFile FileName="NewApp.BusinessTier.Models.xsd" MetadataType="Schema" ID="c470fe83-c67d-47a3-9c76-d1c0ad8f9059" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/SaleItemFactory/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

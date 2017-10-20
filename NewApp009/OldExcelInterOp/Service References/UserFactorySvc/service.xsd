@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" />
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsersResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="UserObjArray" nillable="true" type="q1:ArrayOfUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDProofTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDProofValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromDateofBirth" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ToDateofBirth" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FromDateofStartRelationship" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ToDateofStartRelationship" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FromDateofExpiryRelationship" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ToDateofExpiryRelationship" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsersByCriteriaResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="UserObjArray" nillable="true" type="q2:ArrayOfUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSalesDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSalesDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserSalesDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="UserObj" nillable="true" type="q3:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBasicDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBasicDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserBasicDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="UserObj" nillable="true" type="q4:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="UserObj" nillable="true" type="q5:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddUserDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyUserDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="UserObj" nillable="true" type="q6:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUserDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserPhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Userid" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="UserObj" nillable="true" type="q7:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserPhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddUserPhotoResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserPhotoResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="imgBytes" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticateUserResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

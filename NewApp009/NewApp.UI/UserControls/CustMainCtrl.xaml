@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.CustMainCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}" IsVisibleChanged="UserControl_IsVisibleChanged" Style="{StaticResource UserControlStyle}" HorizontalAlignment="Center">
+    <Grid  VerticalAlignment="Top" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical"  VerticalAlignment="Top"  HorizontalAlignment="Center">
+            <Grid VerticalAlignment="Top"  HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="5"  Text="Customer Name/Id"></TextBlock>
+                    <TextBox Margin="5"  Name="txt_CustNameId" TextChanged="txt_CustNameId_TextChanged"></TextBox>
+                </StackPanel>
+            </Grid>
+            <DataGrid Name="dg_CustMain" Height="130" VerticalAlignment="Top"  HorizontalAlignment="Center" SelectionChanged="dg_CustMain_SelectionChanged" MouseUp="dg_CustMain_MouseUp">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Customer Id" Width="90">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding CustomerId}" Width="90"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Customer Name" Width="150">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding CustomerName}" Width="150"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Date of Birth" Width="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding DateofBirth, StringFormat=\{0:dd-MMM-yyyy\}}" Width="100"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Status" Width="75">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Status.CustomerStatusValue}" Width="75"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Mobile" Width="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Mobile}" Width="100"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Amt To be Paid" Width="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding AmountTobePaid}" Width="100"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Amt Paid YTD" Width="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding AmountPaidYTD}" Width="100"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="5"  Name="btn_SelCust" Content="Select" Click="btn_SelCust_Click"></Button>
+                    <Button Margin="5"  Name="btn_AddCust" Click="btn_AddCust_Click">New</Button>
+                    <Button Margin="5"  Name="btn_ModifyCust" Click="btn_ModifyCust_Click">Modify</Button>
+                    <Button Margin="5"  Name="btn_DeleteCust" Click="btn_DeleteCust_Click">Delete</Button>
+                    <Button Margin="5"  Name="Btn_Close" Click="Btn_Close_Click">Close</Button>
+                </StackPanel>
+            </Grid>
+            <UsrCtrls:CustDtlViewCtrl x:Name="uc_CustDetails" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

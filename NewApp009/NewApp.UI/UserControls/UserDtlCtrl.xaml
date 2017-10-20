@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.UserDtlCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <Grid Margin="5" Background="Transparent">
+        <StackPanel Orientation="Vertical" Margin="5">
+            <Grid Background="Transparent" Height="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.1*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row ="0" Grid.Column ="1">
+                    <TextBlock  Text="User Name:  " Style="{StaticResource TextHdrFtrStyle}"></TextBlock>
+                    <TextBlock Name="txt_UserName" Text="ANNAPRAGADA VENKATA KRISHNA MURTHY"  FontWeight="Bold" Style="{StaticResource TextHdrFtrStyle}"></TextBlock>
+                    <TextBlock Name="txt_bracket1" Style="{StaticResource TextHdrFtrStyle}" Text="(" ></TextBlock>
+                    <TextBlock Name="txt_UserId" Style="{StaticResource TextHdrFtrStyle}" Text= "VA16000" Width="Auto"  FontWeight="Bold"></TextBlock>
+                    <TextBlock Name="txt_bracket2" Style="{StaticResource TextHdrFtrStyle}" Text=")" ></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row ="1" Grid.Column ="1" >
+                    <TextBlock Style="{StaticResource TextHdrFtrStyle}" Text="Last Login:   "></TextBlock>
+                    <TextBlock Name="tb_LastLoginDateTime" Style="{StaticResource TextHdrFtrStyle}" Text="01 March 2001 01:00:00 AM" ></TextBlock>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

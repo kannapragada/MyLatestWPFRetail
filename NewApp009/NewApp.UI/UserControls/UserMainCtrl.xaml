@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.UserMainCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}" IsVisibleChanged="UserControl_IsVisibleChanged" Style="{StaticResource UserControlStyle}"    HorizontalAlignment="Center">
+    <Grid HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Margin="5"  Text="User Name/Id"></TextBlock>
+                    <TextBox Margin="5"  Name="txt_UserNameId" TextChanged="txt_UserNameId_TextChanged"></TextBox>
+                </StackPanel>
+            <DataGrid Name="dg_UserMain" Height="125" VerticalAlignment="Top"    SelectionChanged="dg_UserMain_SelectionChanged" MouseUp="dg_UserMain_MouseUp">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding UserId}"  Header="User Id" Width="75"/>
+                            <DataGridTextColumn Binding="{Binding UserName}"  Header="User Name" Width="175"/>
+                            <DataGridTextColumn Binding="{Binding Status.UserStatusValue}"  Header="Status" Width="75"/>
+                            <DataGridTextColumn Binding="{Binding Mobile}"  Header="Mobile" Width="150"/>
+                            <DataGridTextColumn Binding="{Binding AmountTobePaid}"  Header="Amount To be Paid" Width="125"/>
+                            <DataGridTextColumn Binding="{Binding AmountPaidYTD}"  Header="Amount Paid YTD" Width="125"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5"  Name="btn_SelUser" Content="Select" Click="btn_SelUser_Click"></Button>
+                        <Button Margin="5"  Name="btn_AddUser" Click="btn_AddUser_Click">New</Button>
+                        <Button Margin="5"  Name="btn_ModifyUser" Click="btn_ModifyUser_Click">Modify</Button>
+                        <Button Margin="5"  Name="btn_DeleteUser" Click="btn_DeleteUser_Click">Delete</Button>
+                        <Button Margin="5"  Name="Btn_Close" Click="Btn_Close_Click">Close</Button>
+                    </StackPanel>
+                </Grid>
+            <UsrCtrls:UserDtlViewCtrl x:Name="uc_UserDetails" HorizontalAlignment="Center" VerticalAlignment="Top" Loaded="uc_UserDetails_Loaded" />
+        </StackPanel>
+    </Grid>
+</UserControl>
+

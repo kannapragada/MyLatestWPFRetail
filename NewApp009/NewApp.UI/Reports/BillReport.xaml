@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="NewApp.Reports.BillReport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:extToolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:repctrl="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms" Loaded="UserControl_Loaded">
+    <Grid Margin="5">
+        <WindowsFormsHost Height="475" Width="425" VerticalAlignment="Top"  HorizontalAlignment="Center" Loaded="WindowsFormsHost_Loaded">
+            <repctrl:ReportViewer x:Name="_reportViewer" RenderingComplete="_reportViewer_RenderingComplete" Height="465"></repctrl:ReportViewer>
+        </WindowsFormsHost>
+    </Grid>
+</UserControl>

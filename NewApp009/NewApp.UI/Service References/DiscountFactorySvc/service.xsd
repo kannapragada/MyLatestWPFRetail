@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" />
+  <xs:element name="GetDiscountDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DiscCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDiscountDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="DiscObj" nillable="true" type="q1:Discount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DiscCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDiscountListResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="DiscObjArray" nillable="true" type="q2:ArrayOfDiscount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewDiscount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="DiscObj" nillable="true" type="q3:Discount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewDiscountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddNewDiscountResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyDiscDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyDiscDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDiscDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="DiscObj" nillable="true" type="q4:Discount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDiscDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDiscDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

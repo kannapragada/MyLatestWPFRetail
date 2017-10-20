@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be21bb82-cd9b-43f7-8da5-2edef4a157e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/WCFRetailService/DiscountFactory/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="61418971-935e-4637-bec5-b18b1b293983" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/DiscountFactory/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="8db24949-36d8-4f4b-95a1-7cfe89dcfeb8" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/DiscountFactory/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="30645109-c4dd-4718-a29e-70aafdd13f2d" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/DiscountFactory/mex" />
+    <MetadataFile FileName="NewApp.BusinessTier.Models.xsd" MetadataType="Schema" ID="fa8d44b3-48af-407a-929f-058d2213f357" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/DiscountFactory/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

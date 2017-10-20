@@ -1,0 +1,219 @@
+.navigationPageBody {
+	BORDER-BOTTOM-STYLE: double; BORDER-RIGHT-STYLE: double; BACKGROUND-COLOR: #ff00ff; BORDER-TOP-STYLE: double; BORDER-LEFT-STYLE: double
+}
+.comboBox {
+	FONT-FAMILY: Lucida Sans Unicode; FONT-SIZE: 10pt
+}
+.table {
+	FONT-FAMILY: Arial; FONT-SIZE: 15pt; FONT-WEIGHT: bold
+}
+.url3 {
+	FONT-FAMILY: Arial; FONT-SIZE: 10pt
+}
+.url2 {
+	FONT-FAMILY: Arial; FONT-SIZE: 10pt
+}
+.url1 {
+	FONT-FAMILY: Arial; FONT-SIZE: 10pt
+}
+.displayTable {
+	
+}
+.displayFieldLabel {
+	FONT-FAMILY: Arial; FONT-SIZE: 12pt; FONT-WEIGHT: bold
+}
+.displayFieldData {
+	FONT-FAMILY: Arial; FONT-SIZE: 12pt
+}
+.subTableHeading {
+	FONT-FAMILY: Arial; FONT-SIZE: 11pt; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.displayTableHeading {
+	FONT-FAMILY: Arial; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.displayTableData {
+	FONT-FAMILY: Arial; FONT-SIZE: 12px
+}
+.bodyText {
+	FONT-FAMILY: Arial; FONT-SIZE: 12pt
+}
+.header3 {
+	FONT-FAMILY: Arial; COLOR: #ff00ff; FONT-SIZE: 14pt
+}
+.header2 {
+	FONT-FAMILY: Arial Black; COLOR: #008000; FONT-SIZE: 18pt; FONT-WEIGHT: bold
+}
+.header1 {
+	BORDER-RIGHT-WIDTH: 3px; FONT-FAMILY: arial; BORDER-TOP-WIDTH: 3px; BORDER-BOTTOM-WIDTH: 3px; COLOR: #006699; FONT-SIZE: 12pt; BORDER-LEFT-WIDTH: 3px
+}
+.inputFieldLabel {
+	FONT-FAMILY: Tahoma; FONT-SIZE: 12px
+}
+.functionalHeader {
+	BACKGROUND-COLOR: #f1f1f1; FONT-FAMILY: verdana; COLOR: #333366; FONT-SIZE: 11pt; FONT-WEIGHT: bold
+}
+.inputField {
+	FONT-FAMILY: Book Antiqua; FONT-SIZE: 9pt
+}
+.button {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 2px; LINE-HEIGHT: 10px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Arial; BACKGROUND: #d9ddf1; COLOR: #084868; FONT-SIZE: 11px; CURSOR: hand; FONT-WEIGHT: bold; PADDING-TOP: 2px
+}
+.userMiniDetails {
+	FONT-FAMILY: Comic Sans MS; COLOR: #0000ff; FONT-SIZE: 8pt
+}
+.specificNavigationLinks {
+	FONT-FAMILY: Bookman Old Style; COLOR: #566fb3; FONT-SIZE: 8pt; FONT-WEIGHT: bold
+}
+.navigationTableHeading {
+	BACKGROUND-COLOR: #00ffff; FONT-STYLE: italic; COLOR: #3399ff; FONT-WEIGHT: bold
+}
+.navigationTableData {
+	FONT-FAMILY: Arial; COLOR: #566fb3; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.navigationTableBorder {
+	BORDER-BOTTOM: 1px dotted; BORDER-LEFT: 1px dotted; BORDER-TOP: 0px dotted; BORDER-RIGHT: 1px dotted
+}
+.leftCellBorder {
+	BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; BORDER-TOP: 0px solid; BORDER-RIGHT: 1px solid
+}
+.tableHeadingBG {
+	BACKGROUND-COLOR: #f5f5ff
+}
+.generalNavigationLinks {
+	FONT-FAMILY: Arial; FONT-SIZE: 10pt
+}
+.centerPlaceholderPTag {
+	WIDTH: 400px
+}
+.leftPlaceholderPTag {
+	WIDTH: 150px
+}
+.rightPlaceholderPTag {
+	WIDTH: 150px
+}
+.headerFooterNavigationLinks {
+	FONT-FAMILY: Bookman Old Style; COLOR: #7197b3; FONT-SIZE: 8pt
+}
+.licNewsHeading {
+	TEXT-ALIGN: center; WIDTH: 400px; FONT-FAMILY: Arial; FONT-SIZE: 14pt
+}
+.licNewsDetails {
+	TEXT-ALIGN: justify; WIDTH: 400px; FONT-FAMILY: Arial; FONT-SIZE: 12pt
+}
+.licNewsListHeading {
+	TEXT-ALIGN: center; WIDTH: 400px; FONT-FAMILY: Arial; FONT-SIZE: 14pt
+}
+.licNewsListDetails {
+	TEXT-ALIGN: justify; WIDTH: 400px; FONT-FAMILY: Arial; FONT-SIZE: 12pt
+}
+.successMessages {
+	FONT-FAMILY: Arial; FONT-SIZE: 12pt
+}
+.errorMessages {
+	FONT-FAMILY: Arial; COLOR: #ff0000; FONT-SIZE: 12pt
+}
+.lapsedRow {
+	BACKGROUND-COLOR: #f0f0ff
+}
+.lapsedRowData {
+	FONT-FAMILY: Arial; FONT-SIZE: 9px
+}
+.disclaimer {
+	FONT-FAMILY: Arial; FONT-SIZE: 8pt
+}
+.pagingButton {
+	BORDER-BOTTOM-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 0px; BACKGROUND-COLOR: #f1f1f1; BORDER-TOP-COLOR: #ffffff; FONT-FAMILY: verdana; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; COLOR: #629cda; BORDER-RIGHT-COLOR: #ffffff; FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #ffffff; BORDER-LEFT-WIDTH: 0px; CURSOR: hand; FONT-WEIGHT: bold
+}
+.pagingInputField {
+	BORDER-BOTTOM: 1px inset; TEXT-ALIGN: center; BORDER-LEFT: 1px inset; BACKGROUND-COLOR: #e0dfed; FONT-FAMILY: verdana; COLOR: #000000; FONT-SIZE: 9pt; BORDER-TOP: 1px inset; BORDER-RIGHT: 1px inset
+}
+.pagingLabel {
+	BORDER-BOTTOM: 0px; TEXT-ALIGN: center; BORDER-LEFT: 0px; BACKGROUND-COLOR: #f1f1f1; FONT-FAMILY: verdana; COLOR: #000000; FONT-SIZE: 9pt; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.buttonPolicyDetails {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 2px; LINE-HEIGHT: 10px; PADDING-LEFT: 2px; WIDTH: 140px; PADDING-RIGHT: 2px; FONT-FAMILY: Arial; BACKGROUND: #d9ddf1; COLOR: #084868; FONT-SIZE: 11px; CURSOR: hand; FONT-WEIGHT: bold; PADDING-TOP: 2px
+}
+.resolution {
+	TEXT-ALIGN: right; FONT-FAMILY: Arial; COLOR: #000000; FONT-SIZE: 7.5pt; FONT-WEIGHT: bold
+}
+.inputBox {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.topNavigation {
+	FONT-FAMILY: Arial; COLOR: #6699ff; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+.headerNavigation {
+	FONT-FAMILY: Arial; COLOR: #6699ff; FONT-SIZE: 7.5pt; FONT-WEIGHT: bold
+}
+.tableBorderPremCalendar {
+	BORDER-BOTTOM: #595952 1px solid; PADDING-BOTTOM: 1px; BORDER-RIGHT-WIDTH: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-COLLAPSE: collapse; BORDER-RIGHT-COLOR: #595952; BORDER-LEFT-COLOR: #595952; BORDER-TOP: #595952 1px solid; BORDER-LEFT-WIDTH: 1px; PADDING-TOP: 1px
+}
+.commonTableBorderPremCalendar {
+	BORDER-BOTTOM: #595952 1px solid; BORDER-LEFT: #595952 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-COLLAPSE: collapse; BORDER-TOP: #595952 1px solid; BORDER-RIGHT: #595952 1px solid; PADDING-TOP: 1px
+}
+.commonTableBorder {
+	BORDER-BOTTOM: #595952 1px solid; BORDER-LEFT: #595952 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-COLLAPSE: collapse; BORDER-TOP: #595952 1px solid; BORDER-RIGHT: #595952 1px solid; PADDING-TOP: 1px; text-wrap: wrap
+}
+.currentUserMessage {
+	FONT-FAMILY: Arial; COLOR: #6699ff; FONT-SIZE: 10pt
+}
+.otherUserMessage {
+	FONT-FAMILY: Arial; COLOR: #000000; FONT-SIZE: 10pt
+}
+.systemUserMessage {
+	FONT-FAMILY: Arial; COLOR: #ff0000; FONT-SIZE: 10pt
+}
+.errorHeading {
+	FONT-FAMILY: Arial; COLOR: red; FONT-SIZE: 15pt; FONT-WEIGHT: bold
+}
+.firstNameDisplay {
+	FONT-FAMILY: Geneva, Arial, Helvetica, sans-serif; FONT-WEIGHT: bold
+}
+.text {
+	LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #898989; FONT-SIZE: 9px; LIST-STYLE-IMAGE: url(bullet.jpg); TEXT-DECORATION: none
+}
+.newuser {
+	FONT-STYLE: normal; FONT-FAMILY: "Times New Roman", Times, serif; COLOR: #ff4e00; FONT-SIZE: 10px; FONT-WEIGHT: normal
+}
+.basetext {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #7b7b7b; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.txtbox {
+	BACKGROUND-COLOR: #ebebeb; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 17px; COLOR: #003366; FONT-SIZE: 10px
+}
+.content {
+	TEXT-ALIGN: justify; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #555555; FONT-SIZE: 11px
+}
+.contentheader {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #555555; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.contentheader1 {
+	FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #555555; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.loginbox {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: #e6e6e6; WIDTH: 120px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 16px; COLOR: #000000; FONT-SIZE: 10px; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.loginboxinside {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: #e6e6e6; WIDTH: 90px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 16px; COLOR: #000000; FONT-SIZE: 10px; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.contentheader2 {
+	FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #6676a8; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.HEADER {
+	FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #003366; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.contentprod {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; LETTER-SPACING: -1px; COLOR: #fe814b; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.breadcrums {
+	FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #536393; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.breadcrums2 {
+	FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px; FONT-WEIGHT: normal
+}
+.botlinks {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #7b7b7b; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.copyright {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #8b8b8b; FONT-SIZE: 10px; FONT-WEIGHT: normal
+}

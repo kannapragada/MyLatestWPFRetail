@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.AppFooter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:extToolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+             >
+    <Grid  Height="30" Style="{StaticResource WindowHdrFtrStyle}">
+        <TextBlock Style="{StaticResource TextHdrFtrStyle}" HorizontalAlignment="Left" Margin="5, 0, 0, 0">Copyright AVSoft Technologies 2015</TextBlock>
+        <!--<extToolkit:BusyIndicator Name="BusyBar" Height="20" Width="200" Margin="0, 0, 10, 0" BusyContent="Please wait. Application is busy!" HorizontalAlignment="Right"></extToolkit:BusyIndicator>-->
+    </Grid>
+</UserControl>

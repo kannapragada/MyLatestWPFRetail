@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.ComposeMailCtrl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="564" d:DesignHeight="416">
+    <Grid Height="400" Width="540" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*" />
+            <ColumnDefinition Width="79*" />
+            <ColumnDefinition Width="44*" />
+            <ColumnDefinition Width="205*" />
+            <ColumnDefinition Width="205*" />
+            <ColumnDefinition Width="21*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Name="textBlock3" Text="To" Grid.ColumnSpan="2" Margin="0,12,21,12" />
+        <TextBox Grid.Row="1" Grid.Column="2" Name="txt_mailTo" Grid.ColumnSpan="4" Width="421" Margin="13,7,0,0" />
+        <TextBlock Grid.Row="2" Grid.Column="1" Name="textBlock4" Text="Subject" Margin="0,0,0,25" />
+        <TextBox Grid.Row="2" Grid.Column="2" Name="txt_mailSubject" Grid.ColumnSpan="4" Margin="13,0,0,0" Width="421" />
+        <TextBlock Grid.Row="2" Grid.Column="1"  Name="textBlock5" Text="Body" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,30,21,0" Grid.RowSpan="2" />
+        <RichTextBox Grid.Row="2" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="4" Name="mailBody" Margin="13,32,12,6" />
+        <StackPanel Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Send"  Margin="5" Name="button1" Click="sendButtonClick"/>
+            <Button Content="Close"  Margin="5" Name="button2" Click="button2_Click" />
+        </StackPanel>
+        <Button Content="Add Attachment" Grid.Column="4" Grid.Row="8" Height="26" HorizontalAlignment="Left" Margin="100,24,0,0" Name="button3" VerticalAlignment="Top" Width="100" Grid.RowSpan="2" Click="button3_Click" Grid.ColumnSpan="2" />
+        <DataGrid AutoGenerateColumns="False" Grid.ColumnSpan="4" Grid.Row="6" Grid.RowSpan="3" Height="100" HorizontalAlignment="Left" Name="dataGrid1" VerticalAlignment="Top" Width="420" Grid.Column="2" Margin="14,0,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=FileName}" Header="File Name" Width="325" />
+                <DataGridTemplateColumn Header="Remove">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button>
+                                <Hyperlink NavigateUri="{Binding RemoveItem}"></Hyperlink>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

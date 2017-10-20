@@ -1,0 +1,55 @@
+﻿<Window x:Class="ExcelInterOp.ExportToExcel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="DataGrid Excel Export" Height="400" Width="250">   
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" HorizontalAlignment="Right" Width="50" Height="25" Content="Export" Click="btnEmployee_Click" Name="btnEmployee"/>
+        <ListBox Grid.Row="1" Name="dgEmployee" ItemsSource="{Binding emps}" SelectionMode="Single"  Margin="5,5,5,5">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Label>Name</Label>
+                            <TextBlock Text="{Binding Path=Id}"/>
+                        <Label>Modified</Label>
+                            <TextBlock Text="{Binding Path=Name}"/>
+                        <Label>Modified</Label>
+                            <TextBlock Text="{Binding Path=Designation}"/>
+                        </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Grid.Row="2" HorizontalAlignment="Right" Width="50" Height="25" Content="Export" Click="btnBook_Click" Name="btnBook"/>
+        <ListBox Grid.Row="1" Name="dgBook" ItemsSource="{Binding books}" SelectionMode="Single"  Margin="5,5,5,5">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Label>ISBN</Label>
+                        <TextBlock Text="{Binding Path=ISBN}"/>
+                        <Label>Title</Label>
+                        <TextBlock Text="{Binding Path=Title}"/>
+                        <Label>Author</Label>
+                        <TextBlock Text="{Binding Path=Author}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+
+        <!--<toolkit:DataGrid Grid.Row="3" Name="dgBook" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="True" Margin="5,5,5,5">
+            <toolkit:DataGrid.Columns>
+                <toolkit:DataGridTextColumn Binding="{Binding Path=ISBN}" Header="ISBN" Width="45"/>
+                <toolkit:DataGridTextColumn Binding="{Binding Path=Title}" Header="Title" Width="100"/>
+                <toolkit:DataGridTextColumn Binding="{Binding Path=Author}" Header="Author" Width="*"/>
+                
+            </toolkit:DataGrid.Columns>
+        </toolkit:DataGrid>-->
+    </Grid>
+</Window>

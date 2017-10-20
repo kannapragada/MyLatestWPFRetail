@@ -1,0 +1,46 @@
+﻿<Window x:Class="NewApp.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Background="#FF9EDDFF">
+    <Window.Resources>
+        <Style x:Key="WindowHdrFtrStyle1" TargetType="{x:Type DockPanel}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="SkyBlue" Offset="0" />
+                        <GradientStop Color="LightSkyBlue" Offset="0.25" />
+                        <GradientStop Color="LightSkyBlue" Offset="0.75" />
+                        <GradientStop Color="SkyBlue" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="WindowHdrFtrStyle2" TargetType="{x:Type DockPanel}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Honeydew" Offset="0" />
+                        <GradientStop Color="Honeydew" Offset="0.25" />
+                        <GradientStop Color="Honeydew" Offset="0.75" />
+                        <GradientStop Color="Honeydew" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <DockPanel Height="51" Width="500" VerticalAlignment="Top" Style="{StaticResource WindowHdrFtrStyle1}" Background="DarkSlateGray"></DockPanel>
+            <DockPanel Height="51" Width="500" VerticalAlignment="Top" Style="{StaticResource WindowHdrFtrStyle2}" Background="#FFE2F5FF"></DockPanel>
+            <DockPanel Height="51" Width="500" VerticalAlignment="Top" Background="DeepSkyBlue"></DockPanel>
+            <DockPanel Height="51" Width="500" VerticalAlignment="Top" Background="YellowGreen"></DockPanel>
+            <DockPanel Height="51" Width="500" VerticalAlignment="Top" Background="MediumSeaGreen"></DockPanel>
+            <DockPanel Height="51" Width="500" VerticalAlignment="Top" Background="White"></DockPanel>
+            <DockPanel Height="200" Width="500" Background="#FFF4FAFD"></DockPanel>
+            <DockPanel Height="51" Width="500" VerticalAlignment="Bottom" Background="#FFF7EBF8">
+                <TextBox Name="textbox_myAmount" Text="{Binding Text, StringFormat=c2}"></TextBox>
+                <Button Name="Btn_myButton" Click="Btn_myButton_Click">My Button</Button>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>

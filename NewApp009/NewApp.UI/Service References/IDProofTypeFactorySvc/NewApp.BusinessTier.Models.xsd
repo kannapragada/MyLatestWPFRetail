@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfIDProofType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IDProofType" nillable="true" type="tns:IDProofType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIDProofType" nillable="true" type="tns:ArrayOfIDProofType" />
+  <xs:complexType name="IDProofType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDProofTypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDProofTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="IDProofTypeValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IDProofType" nillable="true" type="tns:IDProofType" />
+</xs:schema>

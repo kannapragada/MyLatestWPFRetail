@@ -1,0 +1,80 @@
+﻿<Window x:Class="NewApp.UI.NewMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+        xmlns:UsrRepCtrls="clr-namespace:NewApp.Reports"
+        Title="New Main Screen" Name="NewMainScreen" WindowStartupLocation="CenterScreen" WindowStyle="None" 
+        ContentRendered="NewMainScreen_ContentRendered" Loaded="NewMainScreen_Loaded" Style="{StaticResource WindowStyle}">
+        <Grid>
+            <StackPanel Orientation="Vertical" Name="StackPanel_NewMain" VerticalAlignment="Top">
+                <UsrCtrls:AppLogo x:Name="AppLogo" VerticalAlignment="Top"></UsrCtrls:AppLogo>
+                <DockPanel Name="NewApp" VerticalAlignment="Top">               
+                    <Expander Name="Expander1" DockPanel.Dock="Left" Style="{StaticResource VerticalExpanderStyle}" ExpandDirection="Right" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed" VerticalAlignment="Top">
+                    <Grid Background="{StaticResource BaseColor1}">
+                        <StackPanel Orientation="Vertical">
+                            <Expander Header="Main Menu" Style="{StaticResource MainExpanderStyle}" Margin="5"  IsExpanded="True" VerticalAlignment="Top" Name="Expander_MainMenu" Expanded="Expander_MainMenu_Expanded" Collapsed="Expander_MainMenu_Collapsed">
+                        <Menu Name="Menu_MainMenu" Margin="5" >
+                            <Menu.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </Menu.ItemsPanel>
+                            <MenuItem  Name="Menu_DashBoard" Click="Menu_DashBoard_Click" Header="Dash Board" HorizontalContentAlignment="Center" />
+                                <MenuItem  Name="Menu_SaleMain" Click="Menu_SaleMain_Click" Header="New Sale" HorizontalContentAlignment="Center"/>
+                                <MenuItem  Name="Menu_NewPurchase" Header="New Purchase" HorizontalContentAlignment="Center"/>
+                                <MenuItem  Name="Menu_SearchMain" Click="Menu_SearchMain_Click" Header="Search Main" HorizontalContentAlignment="Center"/>
+                                <MenuItem  Name="Menu_MailMain" Click="Menu_MailMain_Click" Header="Send Mail" HorizontalContentAlignment="Center"/>
+                        </Menu>
+                    </Expander>
+                            <Expander Header="Maintenance" Style="{StaticResource MainExpanderStyle}" Margin="5"  IsExpanded="True" VerticalAlignment="Top" Name="Expander_Maintenance">
+                                <Menu Name="Menu_Maintenance" Margin="5" >
+                            <Menu.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </Menu.ItemsPanel>
+                            <MenuItem  Name="Menu_CustMain" Click="Menu_CustMain_Click" Header="Customer Main" />
+                            <MenuItem  Name="Menu_ItemMain" Click="Menu_ItemMain_Click" Header="Items Main" />
+                            <MenuItem  Name="Menu_DiscMain" Click="Menu_DiscMain_Click" Header="Discount Main" />
+                            <MenuItem  Name="Menu_TaxMain" Click="Menu_TaxMain_Click" Header="Tax Main" />
+                            <MenuItem  Name="Menu_ManufMain" Click="Menu_ManufMain_Click" Header="Manufacturer Main" />
+                            <MenuItem  Name="Menu_VendorMain" Click="Menu_VendorMain_Click" Header="Vendor Main" />
+                            <MenuItem  Name="Menu_UserMain" Click="Menu_UserMain_Click" Header="User Main" />
+                        </Menu>
+                            </Expander>
+                            <Expander Header="Reports" Style="{StaticResource MainExpanderStyle}" Margin="5"  IsExpanded="True" VerticalAlignment="Top" Name="Expander_Reports" Expanded="Expander_Reports_Expanded" Collapsed="Expander_Reports_Collapsed">
+                            <Menu Name="Menu_Reports" Margin="5"  >
+                            <Menu.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </Menu.ItemsPanel>
+                            <MenuItem Header="Customers Outstanding"  Name="Menu_CustOutstandingDtls" Click="Menu_CustOutstandingDtls_Click" />
+                            <MenuItem Header="Daily Sales"  Name="Menu_DailySales" Click="Menu_DailySales_Click" />
+                            <MenuItem Header="Items Expiry"  Name="Menu_ItemsExpiring" Click="Menu_ItemsExpiring_Click" />
+                        </Menu>
+                    </Expander>
+                            <Expander Header="Tools" Style="{StaticResource MainExpanderStyle}" Margin="5"  IsExpanded="False" VerticalAlignment="Top" Name="Expander_Tools" Expanded="Expander_Tools_Expanded" Collapsed="Expander_Tools_Collapsed">
+                            <Menu Name="Menu_Tools" Margin="5"  >
+                                <Menu.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Vertical"/>
+                                    </ItemsPanelTemplate>
+                                </Menu.ItemsPanel>
+                                    <MenuItem  Name="Menu_Calculator" Click="Menu_Calculator_Click" Header="Calculator" />
+                                    <MenuItem  Name="Menu_Preferences" Click="Menu_Preferences_Click" Header="Preferences" />
+                                    <MenuItem  Name="Menu_UploadFromExcel" Click="Menu_UploadFromExcel_Click" Header="Upload From Excel" />
+                            </Menu>
+                        </Expander>
+                        </StackPanel>
+                    </Grid>
+                    </Expander>
+                    <DockPanel Name="dockpanel_SalesMain" LastChildFill="True"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                        <TabControl Name="tab_Main" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5">
+                        </TabControl>
+                    </DockPanel>
+                </DockPanel>
+                <UsrCtrls:AppFooter x:Name="Footer" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"></UsrCtrls:AppFooter>
+            </StackPanel>
+        </Grid>
+</Window>

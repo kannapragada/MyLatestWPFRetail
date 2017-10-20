@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="35d02c44-01f4-41d6-83c4-6e29d2547d68" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/WCFRetailService/TaxFactory/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="08fd361c-1b0f-4101-a719-8d5fbf3cd17f" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/TaxFactory/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9fbab285-af60-40b3-a056-aed8c9b5fd61" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/TaxFactory/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="372d6b12-74c2-46b8-8090-88901a65d66a" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/TaxFactory/mex" />
+    <MetadataFile FileName="NewApp.BusinessTier.Models.xsd" MetadataType="Schema" ID="d725341e-a063-4a98-8966-5fb7df971250" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/TaxFactory/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fd21aa9d-ddfd-436f-a6b7-82e768d83ace" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/WCFRetailService/ManufacturerFactory/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a60c1794-0efb-431e-bcee-fb7bbd45284c" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/ManufacturerFactory/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d9c8ab33-9528-47aa-81da-6a1d56fed157" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/ManufacturerFactory/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5c34e580-7aa5-4479-887b-c8720f265c6e" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/ManufacturerFactory/mex" />
+    <MetadataFile FileName="NewApp.BusinessTier.Models.xsd" MetadataType="Schema" ID="6bb99ef4-15ad-433e-99f9-9fe0cb407a8a" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/ManufacturerFactory/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

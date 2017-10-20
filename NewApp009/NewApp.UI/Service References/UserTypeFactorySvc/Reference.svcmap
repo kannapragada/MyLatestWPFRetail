@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="588f6495-83a1-4a0c-aa9b-cb1a9c1953f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Design_Time_Addresses/WCFRetailService/UserTypeFactory/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="3631e745-6bf6-4b6f-8586-6d2c6249451b" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/UserTypeFactory/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="761fcbaa-b451-472d-81ac-4090f2363539" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/UserTypeFactory/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3ecda09e-f2aa-469b-b57e-43a6e7ee73c9" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/UserTypeFactory/mex" />
+    <MetadataFile FileName="NewApp.BusinessTier.Models.xsd" MetadataType="Schema" ID="8123bec1-b9f7-4521-b38d-789f925af802" SourceId="1" SourceUrl="http://localhost:8732/Design_Time_Addresses/WCFRetailService/UserTypeFactory/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

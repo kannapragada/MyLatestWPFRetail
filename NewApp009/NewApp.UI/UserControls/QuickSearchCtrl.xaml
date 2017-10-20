@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.QuickSearchCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" IsVisibleChanged="UserControl_IsVisibleChanged" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Style="{StaticResource UserControlStyle}">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <GroupBox Header="Search Criteria" Height="200">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                    <Grid HorizontalAlignment="Right">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5"  Height="20" Width ="50" Name="btn_Search" Content="Search" Click="btn_Search_Click"></Button>
+                        <Button Margin="5"  Height="20" Width ="50" Name="btn_Reset" Content="Reset"></Button>
+                        </StackPanel>
+                </Grid>
+                </StackPanel>
+            </GroupBox>
+            <Grid Background="White" >
+                    <StackPanel Orientation="Vertical">
+                        <DataGrid Height="100" Width="225" Name="dg_SearchResults" SelectionChanged="dg_SearchResults_SelectionChanged">
+                        </DataGrid>
+                        <TextBlock Height="15" Text="Total Records: "  Name="lblTotalRecords" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                </Grid>
+            <GroupBox Header="" Height="175">
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

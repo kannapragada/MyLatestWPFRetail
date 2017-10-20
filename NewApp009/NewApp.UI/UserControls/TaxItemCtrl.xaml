@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.TaxItemCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}" mc:Ignorable="d" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    HorizontalAlignment="Center">
+    <Grid HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <Grid  Height="300" Width="350">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="0.1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="1" Grid.Column="1"  >Tax Code</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="3"  Name="tb_TaxCode" ></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="1"  >Item Id</TextBlock>
+                    <ComboBox Grid.Row="2" Grid.Column="3"  Name="cmb_ItemId" DisplayMemberPath ="ItemId"  SelectionChanged="cmb_ItemId_SelectionChanged" LostFocus="cmb_ItemId_LostFocus"></ComboBox>
+                    <TextBlock Grid.Row="3" Grid.Column="1"  >Item Name</TextBlock>
+                    <TextBox Grid.Row="3" Grid.Column="3"  Name="tb_ItemName" ></TextBox>
+                    <TextBlock Grid.Row="4" Grid.Column="1"  >Batch Id</TextBlock>
+                    <ComboBox Grid.Row="4" Grid.Column="3"  Name="cmb_BatchId" DisplayMemberPath ="BatchId" ></ComboBox>
+                    <TextBlock Grid.Row="5" Grid.Column="1" >Remarks</TextBlock>
+                <TextBox Grid.Row="5" Grid.Column="3" Grid.RowSpan="3" Name="txt_Remarks"  Height="80" Width="200" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Top" ></TextBox>
+                    <TextBlock Grid.Row="8" Grid.Column="1"  >Start Date</TextBlock>
+                    <DatePicker Grid.Row="8" Grid.Column="3" Name="date_StartDate"  ></DatePicker>
+                    <TextBlock Grid.Row="9" Grid.Column="1"  >End Date</TextBlock>
+                    <DatePicker Grid.Row="9" Grid.Column="3" Name="date_EndDate"  ></DatePicker>
+                    <TextBlock Grid.Row="10" Grid.Column="1" >Created Date</TextBlock>
+                    <TextBlock Grid.Row="10" Grid.Column="3" Name="tb_CreateDate" ></TextBlock>
+                    <TextBlock Grid.Row="11" Grid.Column="1" >Last Modified Date</TextBlock>
+                    <TextBlock Grid.Row="11" Grid.Column="3" Name="tb_LastModDate" ></TextBlock>
+                </Grid>
+            <Grid Name="grid_Actions1"  HorizontalAlignment="Center" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="5"  Name="btn_Commit" Click="btn_Commit_Click">Commit</Button>
+                    <Button Margin="5"  Name="Btn_Close1" Click="Btn_Close_Click">Close</Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

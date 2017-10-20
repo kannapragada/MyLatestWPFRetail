@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.TaxMainCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}" IsVisibleChanged="UserControl_IsVisibleChanged" mc:Ignorable="d" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    Style="{StaticResource UserControlStyle}" HorizontalAlignment="Center">
+    <Grid HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <Grid >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="5"  Text="Tax Code"></TextBlock>
+                    <TextBox Margin="5"  Name="txt_TaxCode" TextChanged="txt_TaxCode_TextChanged"></TextBox>
+                </StackPanel>
+            </Grid>
+            <StackPanel Orientation="Vertical">
+                <DataGrid Name="dg_TaxList" Height="125"    SelectionChanged="dg_TaxList_SelectionChanged">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding TaxCode}"  Header="Tax Code" Width="90"/>
+                                <DataGridTextColumn Binding="{Binding TaxName}"  Header="Tax Name" Width="150"/>
+                                <DataGridTextColumn Binding="{Binding TaxKind.TaxKindValue}"  Header="Tax Kind" Width="90"/>
+                                <DataGridTextColumn Binding="{Binding TaxType.TaxTypeValue}"  Header="Tax Type" Width="90"/>
+                                <DataGridTextColumn Binding="{Binding TaxValue}"  Header="Tax Value" Width="90"/>
+                                <DataGridTextColumn Binding="{Binding StartDate}"  Header="Start Date" Width="100"/>
+                                <DataGridTextColumn Binding="{Binding EndDate}"  Header="End Date" Width="100"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                <Grid Name="grid_Actions" Margin="5"  HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Margin="5"  Name="btn_LinkItems" Content="Add Items to Tax" Click="btn_LinkItems_Click"></Button>
+                            <Button Margin="5"  Name="btn_AddTax" Click="btn_AddTax_Click">New</Button>
+                            <Button Margin="5"  Name="btn_ModifyTax" Click="btn_ModifyTax_Click">Modify</Button>
+                            <Button Margin="5"  Name="btn_DeleteTax" Click="btn_DeleteTax_Click">Delete</Button>
+                            <Button Margin="5"  Name="Btn_Close" Click="Btn_Close_Click">Close</Button>
+                        </StackPanel>
+                    </Grid>
+                <StackPanel Orientation="Vertical" Margin="5" HorizontalAlignment="Center">
+                    <DataGrid Name="dg_TaxItems" Height="125"   >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding ItemId}"  Header="Item Code" Width="90"/>
+                            <DataGridTextColumn Binding="{Binding BatchId}"  Header="Batch Id" Width="90"/>
+                            <DataGridTextColumn Binding="{Binding StoreItemDetail.ItemName}"  Header="Item Name" Width="175"/>
+                            <DataGridTextColumn Binding="{Binding StartDate}"  Header="Start Date" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding EndDate}"  Header="End Date" Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid Name="grid_Actions2" Margin="5"  HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Margin="5"  Name="btn_ModLinkDtls" Content="Modify Details" Click="btn_ModLinkDtls_Click"></Button>
+                            <Button Margin="5"  Name="btn_DelinkItemsToTax" Click="btn_DelinkItemsToTax_Click">Delete Items</Button>
+                            <Button Margin="5"  Name="btn_ViewLinkDetails" Click="btn_ViewLinkDetails_Click">View Details</Button>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

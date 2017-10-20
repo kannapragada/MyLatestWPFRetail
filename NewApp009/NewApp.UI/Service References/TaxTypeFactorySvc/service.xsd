@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" />
+  <xs:element name="GetAllTaxTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTaxTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllTaxTypesResult" type="xs:boolean" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="TaxTypeObjArray" nillable="true" type="q1:ArrayOfTaxType" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TaxTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTaxTypeResult" type="xs:boolean" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="TaxType" nillable="true" type="q2:TaxType" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,278 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.SearchMainCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" IsVisibleChanged="UserControl_IsVisibleChanged" Style="{StaticResource UserControlStyle}"    HorizontalAlignment="Center">
+    <Grid HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <GroupBox Header="Search Criteria" >
+                <Grid Margin="5">
+                    <StackPanel Orientation="Vertical">
+                        <TabControl Name="tab_Main" Height="245" Width ="825" >
+                            <TabItem Name="tab_ItemSearch" Header="Items" >
+                                <Grid Height="245" Width ="825" VerticalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.75*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Item Code" />
+                                    <TextBox Grid.Row="1" Grid.Column="3"  Name="txt_ItemId"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Item Name" />
+                                    <TextBox Grid.Row="3" Grid.Column="3"  Name="txt_ItemName"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Text="Batch Id" />
+                                    <TextBox Grid.Row="5" Grid.Column="3"  Name="txt_BatchId"/>
+                                    <TextBlock Grid.Row="7" Grid.Column="1" Text="Manufacture - From Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="3" Name="date_StartDateofManuf" ></DatePicker>
+                                    <TextBlock Grid.Row="7" Grid.Column="5" Text="Manufacture - To Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="7" Name="date_EndDateofManuf" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="1" Text="Procured - From Date" />
+                                    <DatePicker Grid.Row="9" Grid.Column="3" Name="date_StartDateProcured" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="5" Text="Procured - To Date" />
+                                    <DatePicker Grid.Row="9" Grid.Column="7" Name="date_EndDateofProcured" ></DatePicker>
+                                    <TextBlock Grid.Row="11" Grid.Column="1" Text="Expiry - From Date" />
+                                    <DatePicker Grid.Row="11" Grid.Column="3" Name="date_StartDateofExp" ></DatePicker>
+                                    <TextBlock Grid.Row="11" Grid.Column="5" Text="Expiry - To Date" />
+                                    <DatePicker Grid.Row="11" Grid.Column="7" Name="date_EndDateofExp" ></DatePicker>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Name="tab_SalesSearch" Header="Sales" >
+                                <Grid Height="245" Width ="825" VerticalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.75*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Sales Id" />
+                                    <TextBox Grid.Row="1" Grid.Column="3"  Name="txt_SalesId"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Customer Id" />
+                                    <TextBox Grid.Row="3" Grid.Column="3"  Name="txt_SalesCustId"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Text="Customer Name" />
+                                    <TextBox Grid.Row="5" Grid.Column="3"  Name="txt_SalesCustName"/>
+                                    <TextBlock Grid.Row="7" Grid.Column="1" Text="Sales - From Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="3" Name="date_StartSalesDate" ></DatePicker>
+                                    <TextBlock Grid.Row="7" Grid.Column="5" Text="Sales - To Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="7" Name="date_EndSalesDate" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="1" Text="Sales - From Amount" />
+                                    <TextBox Grid.Row="9" Grid.Column="3" Name="date_StartSalesAmount" ></TextBox>
+                                    <TextBlock Grid.Row="9" Grid.Column="5" Text="Sales - To Amount" />
+                                    <TextBox Grid.Row="9" Grid.Column="7" Name="date_EndSalesAmount" ></TextBox>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Name="tab_CustSearch" Header="Customers" >
+                                <Grid Height="245" Width ="825" VerticalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.75*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Customer Id" />
+                                    <TextBox Grid.Row="1" Grid.Column="3"  Name="txt_CustId"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Customer Name" />
+                                    <TextBox Grid.Row="3" Grid.Column="3"  Name="txt_CustName"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Text="Address" />
+                                    <TextBox Grid.Row="5" Grid.Column="3"  Name="txt_CustAddress"/>
+                                    <TextBlock Grid.Row="7" Grid.Column="1" Text="Date of Birth - From Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="3" Name="date_FromDateofBirth" ></DatePicker>
+                                    <TextBlock Grid.Row="7" Grid.Column="5" Text="Date of Birth - To Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="7" Name="date_ToDateofBirth" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="1" Text="Relationship Start - From Date" />
+                                    <DatePicker Grid.Row="9" Grid.Column="3" Name="date_FromDateofStartRelationship" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="5" Text="Relationship Start - To Date" />
+                                    <DatePicker Grid.Row="9" Grid.Column="7" Name="date_ToDateofStartRelationship" ></DatePicker>
+                                    <TextBlock Grid.Row="11" Grid.Column="1" Text="Relationship Expiry - From Date" />
+                                    <DatePicker Grid.Row="11" Grid.Column="3" Name="date_FromRelationshipExpiryDate" ></DatePicker>
+                                    <TextBlock Grid.Row="11" Grid.Column="5" Text="Relationship Expiry - To Date" />
+                                    <DatePicker Grid.Row="11" Grid.Column="7" Name="date_ToRelationshipExpiryDate" ></DatePicker>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Name="tabManufSearch" Header="Manufacturers" >
+                                <Grid Height="245" Width ="825" VerticalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.75*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Manufacturer Id" />
+                                    <TextBox Grid.Row="1" Grid.Column="3"  Name="txtManufId"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Manufacturer Name" />
+                                    <TextBox Grid.Row="3" Grid.Column="3"  Name="txtManufName"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Text="Address" />
+                                    <TextBox Grid.Row="5" Grid.Column="3"  Name="txtManufAddress"/>
+                                    <TextBlock Grid.Row="7" Grid.Column="1" Text="Date of Birth - From Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="3" Name="date_MFromDateofBirth" ></DatePicker>
+                                    <TextBlock Grid.Row="7" Grid.Column="5" Text="Date of Birth - To Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="7" Name="date_MToDateofBirth" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="1" Text="Relationship Start - From Date" />
+                                    <DatePicker Grid.Row="9" Grid.Column="3" Name="date_MFromDateofStartRelationship" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="5" Text="Relationship Start - To Date" />
+                                    <DatePicker Grid.Row="9" Grid.Column="7" Name="date_MToDateofStartRelationship" ></DatePicker>
+                                    <TextBlock Grid.Row="11" Grid.Column="1" Text="Relationship Expiry - From Date" />
+                                    <DatePicker Grid.Row="11" Grid.Column="3" Name="date_MFromRelationshipExpiryDate" ></DatePicker>
+                                    <TextBlock Grid.Row="11" Grid.Column="5" Text="Relationship Expiry - To Date" />
+                                    <DatePicker Grid.Row="11" Grid.Column="7" Name="date_MToRelationshipExpiryDate" ></DatePicker>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Name="tabVendorSearch" Header="Vendors" >
+                                <Grid Height="245" Width ="825" VerticalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.05*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.75*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="0.1*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Vendor Id" />
+                                    <TextBox Grid.Row="1" Grid.Column="3"  Name="txtVendorId"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Vendor Name" />
+                                    <TextBox Grid.Row="3" Grid.Column="3"  Name="txtVendorName"/>
+                                    <TextBlock Grid.Row="5" Grid.Column="1" Text="Address" />
+                                    <TextBox Grid.Row="5" Grid.Column="3"  Name="txtVendorAddress"/>
+                                    <TextBlock Grid.Row="7" Grid.Column="1" Text="Date of Birth - From Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="3" Name="date_VFromDateofBirth" ></DatePicker>
+                                    <TextBlock Grid.Row="7" Grid.Column="5" Text="Date of Birth - To Date" />
+                                    <DatePicker Grid.Row="7" Grid.Column="7" Name="date_VToDateofBirth" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="1" Text="Relationship Start - From Date" />
+                                    <DatePicker Grid.Row="9" Grid.Column="3" Name="date_VFromDateofStartRelationship" ></DatePicker>
+                                    <TextBlock Grid.Row="9" Grid.Column="5" Text="Relationship Start - To Date" />
+                                    <DatePicker Grid.Row="9" Grid.Column="7" Name="date_VToDateofStartRelationship" ></DatePicker>
+                                    <TextBlock Grid.Row="11" Grid.Column="1" Text="Relationship Expiry - From Date" />
+                                    <DatePicker Grid.Row="11" Grid.Column="3" Name="date_VFromRelationshipExpiryDate" ></DatePicker>
+                                    <TextBlock Grid.Row="11" Grid.Column="5" Text="Relationship Expiry - To Date" />
+                                    <DatePicker Grid.Row="11" Grid.Column="7" Name="date_VToRelationshipExpiryDate" ></DatePicker>
+                                </Grid>
+                            </TabItem>
+                        </TabControl>
+                        <Grid HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Margin="5"  Height="30" Width ="100" Name="btn_Search" Content="Search" Click="btn_Search_Click"></Button>
+                                <Button Margin="5"  Height="30" Width ="100" Name="btn_Reset" Content="Reset"></Button>
+                                <Button Margin="5"  Height="30" Width ="100" Name="btn_Close" Content="Close" Click="btn_Close_Click"></Button>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Search Results">
+                <Grid Margin="5">
+                    <StackPanel Orientation="Vertical">
+                        <DataGrid Height="150" Width="825" Name="dg_SearchResults" SelectionChanged="dg_SearchResults_SelectionChanged">
+                        </DataGrid>
+                        <TextBlock Height="15" Text="Total Records: "  Name="lblTotalRecords" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

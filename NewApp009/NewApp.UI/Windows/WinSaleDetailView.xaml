@@ -1,0 +1,13 @@
+﻿<Window x:Class="NewApp.UI.Windows.WinSaleDetailView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+        Height="445" Width="675" 
+        Name="WndSaleDetailView" WindowState="Normal" WindowStyle="None" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Loaded="WndSaleDetailView_Loaded">
+    <Grid>
+        <DockPanel Name="dockpanel_SaleDetailView" HorizontalAlignment="Center" VerticalAlignment="Top">
+            
+        </DockPanel>
+        <!--<UsrCtrls:SaleDetailView x:Name="SaleDetailViewCtrl" VerticalAlignment="Top" HorizontalAlignment="Center" Loaded="SaleDetailViewCtrl_Loaded"></UsrCtrls:SaleDetailView>-->
+    </Grid>
+</Window>

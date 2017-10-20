@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" />
+  <xs:element name="GetTaxDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTaxDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="TaxObj" nillable="true" type="q1:Tax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTaxListResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="TaxObjArray" nillable="true" type="q2:ArrayOfTax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGlobalTaxesList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGlobalTaxesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGlobalTaxesListResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="TaxObjArray" nillable="true" type="q3:ArrayOfTax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewTax">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="TaxObj" nillable="true" type="q4:Tax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewTaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddNewTaxResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyTaxDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyTaxDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTaxDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="TaxObj" nillable="true" type="q5:Tax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTaxDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteTaxDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

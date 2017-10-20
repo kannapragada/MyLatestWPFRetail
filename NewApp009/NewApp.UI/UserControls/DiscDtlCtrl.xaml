@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.DiscDtlCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}" IsVisibleChanged="UserControl_IsVisibleChanged" Loaded="UserControl_Loaded" Style="{StaticResource UserControlStyle}" HorizontalAlignment="Center">
+    <Grid HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Grid x:Name="grid_DiscDtlInput1"  Height="245">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="0.1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="1" Grid.Column="1"  >Discount Code</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="3"  Name="tb_DiscCode" ></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="1"  >Discount Name</TextBlock>
+                    <TextBox Grid.Row="2" Grid.Column="3"  Name="txt_DiscName"  ></TextBox>
+                    <TextBlock Grid.Row="3" Grid.Column="1" >Discount Description</TextBlock>
+                    <TextBox Grid.Row="3" Grid.Column="3" Grid.RowSpan="3" Name="txt_DiscDescription" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Top" MaxLength="100" MaxLines="4" Text=" hghkg hbjjkhjk hjhjh hjlkhjhj hjhjhjhj hjhjhjhj hjhjhjkh jhjhjhjh jhjhjhj " Width="200" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+                    <TextBlock Grid.Row="6" Grid.Column="1"  >Discount Kind</TextBlock>
+                    <ComboBox Grid.Row="6" Grid.Column="3"  Name="cmb_DiscKind" DisplayMemberPath="DiscountKindValue" SelectedValuePath="DiscountKindId" Tag="DiscountKindId"></ComboBox>
+                    <TextBlock Grid.Row="7" Grid.Column="1"  >Discount Type</TextBlock>
+                    <ComboBox Grid.Row="7" Grid.Column="3"  Name="cmb_DiscType" DisplayMemberPath="DiscountTypeValue" SelectedValuePath="DiscountTypeId" Tag="DiscountTypeId"></ComboBox>
+                    <TextBlock Grid.Row="8" Grid.Column="1"  >Discount Value</TextBlock>
+                    <TextBox Grid.Row="8" Grid.Column="3"  Name="txt_DiscValue"  ></TextBox>
+                </Grid>
+                <Grid x:Name="grid_DiscDtlInput2"  Height="225">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="0.1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="1" Grid.Column="1"  >Start Date</TextBlock>
+                    <DatePicker Grid.Row="1" Grid.Column="3" Name="date_DiscStartDate"  ></DatePicker>
+                    <TextBlock Grid.Row="2" Grid.Column="1"  >End Date</TextBlock>
+                    <DatePicker Grid.Row="2" Grid.Column="3" Name="date_DiscEndDate"  ></DatePicker>
+                    <TextBlock Grid.Row="3" Grid.Column="1" >Remarks</TextBlock>
+                    <TextBox Grid.Row="3" Grid.Column="3" Grid.RowSpan="3" Name="txt_DiscRemarks" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Top" MaxLength="100" MaxLines="4" Text=" hghkg hbjjkhjk hjhjh hjlkhjhj hjhjhjhj hjhjhjhj hjhjhjkh jhjhjhjh jhjhjhj " Width="200" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+                    <TextBlock Grid.Row="6" Grid.Column="1" >Created Date</TextBlock>
+                    <TextBlock Grid.Row="6" Grid.Column="3" Name="txt_CreateDate" ></TextBlock>
+                    <TextBlock Grid.Row="7" Grid.Column="1" >Last Modified Date</TextBlock>
+                    <TextBlock Grid.Row="7" Grid.Column="3" Name="txt_LastModDate" ></TextBlock>
+                </Grid>
+            </StackPanel>
+            <Grid Name="grid_Actions"  HorizontalAlignment="Center" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="5"  Name="btn_DiscCommit" Click="btn_DiscCommit_Click">Commit</Button>
+                    <Button Margin="5"  Name="Btn_Close" Click="Btn_Close_Click">Close</Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

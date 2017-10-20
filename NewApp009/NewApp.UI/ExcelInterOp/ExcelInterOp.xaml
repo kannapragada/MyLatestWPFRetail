@@ -1,0 +1,9 @@
+﻿<Window x:Class="NewApp.ExcelInterOp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UsrCtrls="clr-namespace:NewApp.ExcelInterOp.UserControls"
+        Title="MainWindow">
+    <Grid>
+        <UsrCtrls:ExcelInterOpCtrl Margin="10" Loaded="ExcelInterOpCtrl_Loaded"></UsrCtrls:ExcelInterOpCtrl>
+    </Grid>
+</Window>

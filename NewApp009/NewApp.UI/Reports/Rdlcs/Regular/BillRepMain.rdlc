@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <Body>
+    <ReportItems>
+      <Subreport Name="Subreport1">
+        <ReportName>BillBasic</ReportName>
+        <Left>0.03661cm</Left>
+        <Height>0.32361cm</Height>
+        <Width>7.04718cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Subreport>
+      <Subreport Name="Subreport2">
+        <ReportName>BillDetail</ReportName>
+        <Top>0.39417cm</Top>
+        <Left>0.03661cm</Left>
+        <Height>0.32396cm</Height>
+        <Width>7.04718cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Subreport>
+    </ReportItems>
+    <Height>0.3025in</Height>
+    <Style />
+  </Body>
+  <Width>2.80331in</Width>
+  <Page>
+    <PageHeight>5.83in</PageHeight>
+    <PageWidth>4.13in</PageWidth>
+    <LeftMargin>0.7874in</LeftMargin>
+    <RightMargin>0.7874in</RightMargin>
+    <TopMargin>0.7874in</TopMargin>
+    <BottomMargin>0.7874in</BottomMargin>
+    <ColumnSpacing>0.05118in</ColumnSpacing>
+    <Style />
+  </Page>
+  <rd:ReportID>c821780c-9b37-459d-8321-44eb836ab053</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+</Report>

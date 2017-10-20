@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="NewApp.Reports.DailySalesRepCtrl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:repctrl="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+        xmlns:UsrRepCtrls="clr-namespace:NewApp.Reports">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Grid VerticalAlignment="Top" Margin="5">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Grid Height="75" VerticalAlignment="Top">
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.05*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="0.05*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="0.05*"/>
+                    </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                        <TextBlock Text="Sale Date" Grid.Row="1" Grid.Column="1"  ></TextBlock>
+                        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+                            <DatePicker Name="date_StartDateofSale" ></DatePicker>
+                            <TextBlock Text=" To " />
+                            <DatePicker Name="date_EndDateofSale" ></DatePicker>
+                        </StackPanel>
+                    </Grid>
+                    <Grid HorizontalAlignment="Right" Margin="0, 10, 0, 0">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Margin="5"  Height="30" Width ="100" Name="btn_Select" Content="Select" Click="btn_Select_Click"></Button>
+                            <Button Margin="5"  Height="30" Width ="100" Name="btn_Reset" Content="Reset" Click="btn_Reset_Click"></Button>
+                            <Button Margin="5"  Height="30" Width ="100" Name="btn_Close" Content="Close" Click="btn_Close_Click"></Button>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid VerticalAlignment="Top" Background="Gray" Margin="5" >
+                <WindowsFormsHost Height="450" Width="500" VerticalAlignment="Top"  HorizontalAlignment="Center" >
+                    <repctrl:ReportViewer x:Name="winFormHost_reportViewer" ></repctrl:ReportViewer>
+                </WindowsFormsHost>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

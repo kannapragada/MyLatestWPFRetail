@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" />
+  <xs:element name="GetManufacturers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetManufacturersResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="ManufObjArray" nillable="true" type="q1:ArrayOfManufacturer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturersByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ManufId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ManufName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDProofTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDProofValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromDateofBirth" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ToDateofBirth" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FromDateofStartRelationship" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ToDateofStartRelationship" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FromDateofExpiryRelationship" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ToDateofExpiryRelationship" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturersByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetManufacturersByCriteriaResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="ManufObjArray" nillable="true" type="q2:ArrayOfManufacturer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturerDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturerDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetManufacturerDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="ManufObj" nillable="true" type="q3:Manufacturer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddManufacturerDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="ManufObj" nillable="true" type="q4:Manufacturer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddManufacturerDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddManufacturerDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyManufacturerDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyManufacturerDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteManufacturerDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="ManufObj" nillable="true" type="q5:Manufacturer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteManufacturerDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteManufacturerDetailsResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddManufacturerPhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufid" type="xs:int" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/NewApp.BusinessTier.Models" minOccurs="0" name="ManufObj" nillable="true" type="q6:Manufacturer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddManufacturerPhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddManufacturerPhotoResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturerPhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetManufacturerPhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetManufacturerPhotoResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="imgBytes" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

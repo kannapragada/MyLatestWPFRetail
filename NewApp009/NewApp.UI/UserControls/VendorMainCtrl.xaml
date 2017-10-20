@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="NewApp.UI.UserControls.VendorMainCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}" IsVisibleChanged="UserControl_IsVisibleChanged" Style="{StaticResource UserControlStyle}"    HorizontalAlignment="Center">
+    <Grid HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+            <Grid >
+                     <StackPanel Orientation="Horizontal" Margin="5">
+                          <TextBlock Margin="5"  Text="Vendor Name/Id"></TextBlock>
+                          <TextBox Margin="5"  Name="txt_VendorNameId" TextChanged="txt_VendorNameId_TextChanged"></TextBox>
+                     </StackPanel>
+                </Grid>
+            <DataGrid Name="dg_VendorMain" Height="125" VerticalAlignment="Top"    SelectionChanged="dg_VendorMain_SelectionChanged" MouseUp="dg_VendorMain_MouseUp">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding VendorId}"  Header="Vendor Id" Width="75"/>
+                            <DataGridTextColumn Binding="{Binding VendorName}"  Header="Vendor Name" Width="175"/>
+                        <DataGridTextColumn Binding="{Binding Status.VendorStatusValue}"  Header="Status" Width="75"/>
+                        <DataGridTextColumn Binding="{Binding Mobile}"  Header="Mobile" Width="150"/>
+                        <DataGridTextColumn Binding="{Binding AmountTobePaid}"  Header="Amount To be Paid" Width="125"/>
+                        <DataGridTextColumn Binding="{Binding AmountPaidYTD}"  Header="Amount Paid YTD" Width="125"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5"  Name="btn_SelVendor" Content="Select" Click="btn_SelVendor_Click"></Button>
+                        <Button Margin="5"  Name="btn_AddVendor" Click="btn_AddVendor_Click">New</Button>
+                        <Button Margin="5"  Name="btn_ModifyVendor" Click="btn_ModifyVendor_Click">Modify</Button>
+                        <Button Margin="5"  Name="btn_DeleteVendor" Click="btn_DeleteVendor_Click">Delete</Button>
+                        <Button Margin="5"  Name="Btn_Close" Click="Btn_Close_Click">Close</Button>
+                    </StackPanel>
+                </Grid>
+            <UsrCtrls:VendorDtlViewCtrl x:Name="uc_VendorDetails" HorizontalAlignment="Center" VerticalAlignment="Top" Loaded="uc_VendorDetails_Loaded" />
+        </StackPanel>
+    </Grid>
+</UserControl>
+

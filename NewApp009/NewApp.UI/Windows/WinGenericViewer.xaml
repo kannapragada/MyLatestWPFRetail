@@ -1,0 +1,13 @@
+﻿<Window x:Class="NewApp.UI.Windows.WinGenericViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UsrCtrls="clr-namespace:NewApp.UI.UserControls"
+        Height="445" Width="675" 
+        Name="WndGenericViewer" WindowState="Normal" WindowStyle="None" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Loaded="WndGenericViewer_Loaded">
+    <Grid>
+        <DockPanel Name="dockpanel_GenericViewer" HorizontalAlignment="Center" VerticalAlignment="Top">
+            
+        </DockPanel>
+        <!--<UsrCtrls:GenericViewer x:Name="MyGenericViewer" VerticalAlignment="Top" HorizontalAlignment="Center" Loaded="MyGenericViewer_Loaded"></UsrCtrls:GenericViewer>-->
+    </Grid>
+</Window>
