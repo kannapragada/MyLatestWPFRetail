@@ -1,19 +1,35 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewApp.BusinessTier.Models", "NewApp.BusinessTier.Models\NewApp.BusinessTier.Models.csproj", "{20C4A36B-4051-4290-8771-B2124027D7FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewApp.UI", "NewApp.UI\NewApp.UI.csproj", "{D7D3D9EE-15B7-403C-9D74-39E487AFF6AA}"
 	ProjectSection(ProjectDependencies) = postProject
+		{30CCAB32-B65D-4A0F-8455-C53F715753E2} = {30CCAB32-B65D-4A0F-8455-C53F715753E2}
 		{CD3CD636-D63E-4BD5-9FE9-2B63DA6F0616} = {CD3CD636-D63E-4BD5-9FE9-2B63DA6F0616}
 		{20C4A36B-4051-4290-8771-B2124027D7FF} = {20C4A36B-4051-4290-8771-B2124027D7FF}
+		{1B914894-FACE-4F5C-AC91-EC863D6F74B3} = {1B914894-FACE-4F5C-AC91-EC863D6F74B3}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewApp.Themes", "NewApp.Themes\NewApp.Themes.csproj", "{CD3CD636-D63E-4BD5-9FE9-2B63DA6F0616}"
+	ProjectSection(ProjectDependencies) = postProject
+		{30CCAB32-B65D-4A0F-8455-C53F715753E2} = {30CCAB32-B65D-4A0F-8455-C53F715753E2}
+		{20C4A36B-4051-4290-8771-B2124027D7FF} = {20C4A36B-4051-4290-8771-B2124027D7FF}
+		{1B914894-FACE-4F5C-AC91-EC863D6F74B3} = {1B914894-FACE-4F5C-AC91-EC863D6F74B3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFCalculator", "WPFCalculator\WPFCalculator\WPFCalculator\WPFCalculator.csproj", "{1B914894-FACE-4F5C-AC91-EC863D6F74B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{30CCAB32-B65D-4A0F-8455-C53F715753E2} = {30CCAB32-B65D-4A0F-8455-C53F715753E2}
+		{20C4A36B-4051-4290-8771-B2124027D7FF} = {20C4A36B-4051-4290-8771-B2124027D7FF}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFRetailService", "WCFRetailService\WCFRetailService.csproj", "{30CCAB32-B65D-4A0F-8455-C53F715753E2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{20C4A36B-4051-4290-8771-B2124027D7FF} = {20C4A36B-4051-4290-8771-B2124027D7FF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,5 +94,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21310545-0DC0-4D93-BDEB-0E1D761EC977}
 	EndGlobalSection
 EndGlobal
