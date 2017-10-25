@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace NewApp.UI.UserControls
+﻿namespace NewApp.UI.UserControls
 {
     public class UserCtrlArgs
     {

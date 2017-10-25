@@ -1,10 +1,6 @@
-﻿//houssem.dellai@ieee.org 
-//+216 95 325 964 
-
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using NewApp.UI.Windows;
 
 namespace NewApp.UI.UserControls
 {

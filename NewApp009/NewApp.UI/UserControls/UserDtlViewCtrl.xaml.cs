@@ -1,29 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using Microsoft.Win32;
-using System.Windows.Shapes;
-using System.Threading;
-using System.IO;
-using System.Drawing;
-using NewApp.BusinessTier.Common;
-using NewApp.BusinessTier.Models;
-using NewApp.UserFactorySvc;
+﻿using NewApp.BusinessTier.Models;
 using NewApp.GenderTypeFactorySvc;
 using NewApp.IDProofTypeFactorySvc;
-using NewApp.UserStatusFactorySvc;
-using NewApp.UserTypeFactorySvc;
 using NewApp.UI.Windows;
-using NewApp.UI.UserControls;
+using NewApp.UserStatusFactorySvc;
+using System;
+using System.IO;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 
 namespace NewApp.UI.UserControls
